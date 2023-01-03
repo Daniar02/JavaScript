@@ -155,49 +155,83 @@
 // if (q == 7) {
 //     console.log(`!`)
 // }
+// switch
+// const role = 'manager';
+// if (role === 'manager') {
+//     console.log('Менеджер')
+// } else if (role === 'admin') {
+//     console.log('админ')
+// } else if (role === 'ceo') {
+//     console.log('СЕО')
+// } else {
+//     console.log('Мы тебя не знаем!')
+// }
+// switch (role) {
+//     case 'manager' : // role === 'manager'
+//         console.log('Менеджер')
+//         break;
+//     case 'admin' : // role === 'admin'
+//         console.log('Админ')
+//         break;
+//     case 'ceo' : // role === 'ceo'
+//         console.log('СЕО')
+//         break;
+//     default:
+//         console.log('Мы тебя не знаем!  ')
+// }
+// switch (role) {
+//     case 'manager':  // role === 'manager'
+//     case 'admin': // role === 'admin'
+//         console.log('Не руководитель')
+//         break;
+//     case 'ceo': // role === 'ceo'
+//         console.log('Руководитель')
+//         break;
+//     default:
+//         console.log('Мы тебя не знаем!')
+// }
+// const num = 1;
+// switch(true) {
+//     case num > 0: // true === num > 0
+//         console.log('Положительный');
+//         break;
+//     case num < 0:
+//         console.log('Положительный');
+//         break;
+//     default:
+//         console.log('Ноль!')
+// }
+//Тернарный оператор
+// const bmwX3Price = 100000;
+// const fordFocusPrice = 10000;
+// const budget = 20000;
+// let message;
+// if (budget > bmwX3Price) {
+//     message = 'BMW';
+// } else if (budget > fordFocusPrice) {
+//     message = 'ford';
+// } else {
+//     message = 'Велосипед';
+// }
+// let message = budget > bmwX3Price ? `BMW` : budget > fordFocusPrice  ? `ford` : `Велосипед`;
+// console.log(`Я хочу купить ${message}`);
 
-const role = 'manager';
-if (role === 'manager') {
-    console.log('Менеджер')
-} else if (role === 'admin') {
-    console.log('админ')
-} else if (role === 'ceo') {
-    console.log('СЕО')
-} else {
-    console.log('Мы тебя не знаем!')
-}
-switch (role) {
-    case 'manager' : // role === 'manager'
-        console.log('Менеджер')
-        break;
-    case 'admin' : // role === 'admin'
-        console.log('Админ')
-        break;
-    case 'ceo' : // role === 'ceo'
-        console.log('СЕО')
-        break;
-    default:
-        console.log('Мы тебя не знаем!  ')
-}
-switch (role) {
-    case 'manager':  // role === 'manager'
-    case 'admin': // role === 'admin'
-        console.log('Не руководитель')
-        break;
-    case 'ceo': // role === 'ceo'
-        console.log('Руководитель')
-        break;
-    default:
-        console.log('Мы тебя не знаем!')
-}
-const num = 1;
-switch(true) {
-    case num > 0: // true === num > 0
-        console.log('Положительный');
-        break;
-    case num < 0:
-        console.log('Положительный');
-        break;
-    default:
-        console.log('Ноль!')
-}
+
+// 10 > 0 ? console.log('Больше 0') : console.log('Не больше');
+// if (10 > 0) {
+//     console.log('Больше 0');
+// } else {
+//     console.log('Не больше');
+// }
+// const str = 10 > 0 ? ('Больше 0') : ('Не больше');
+// console.log(str);
+
+// const nameD = 'Nursultan'
+// const age = 12
+
+// if (age >= 18 ) {
+//     console.log(`Привет ${nameD}` + ` тебе ${age}`);
+// } else {
+//     console.log(`Иди ты пожалуйста ${age} ${age - 18}`)
+// }
+
