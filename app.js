@@ -261,6 +261,7 @@
 //             console.log('Вы робот!');
 //     }
 // }
+//  Домашняя работа
 // const res = prompt('Выборите + или -');
 // switch(true) {
 //     case res === '-':
