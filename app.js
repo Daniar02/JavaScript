@@ -201,6 +201,7 @@
 //     default:
 //         console.log('Ноль!')
 // }
+
 //Тернарный оператор
 // const bmwX3Price = 100000;
 // const fordFocusPrice = 10000;
@@ -215,8 +216,6 @@
 // }
 // let message = budget > bmwX3Price ? `BMW` : budget > fordFocusPrice  ? `ford` : `Велосипед`;
 // console.log(`Я хочу купить ${message}`);
-
-
 // 10 > 0 ? console.log('Больше 0') : console.log('Не больше');
 // if (10 > 0) {
 //     console.log('Больше 0');
@@ -225,15 +224,14 @@
 // }
 // const str = 10 > 0 ? ('Больше 0') : ('Не больше');
 // console.log(str);
-
 // const nameD = 'Nursultan'
 // const age = 12
-
 // if (age >= 18 ) {
 //     console.log(`Привет ${nameD}` + ` тебе ${age}`);
 // } else {
 //     console.log(`Иди ты пожалуйста ${age} ${age - 18}`)
 // }
+
 // Методом prompt получите ответ пользователя на вопрос "Сколько будет 7 + или - 15?".
 // Если ответ верен выведите в консоле "Успех", если нет -"Вы робот!"
 // а если он введёт "Я не робот", то тоже "Успех"
@@ -282,19 +280,18 @@
 //     console.log(res1 - res2);
 //     break;
 // }
+
+//## логический оператор
 // const isAdmin = true;
 // const canWrite = true;
-
 // console.log(`Системный файл ${isAdmin && canWrite}`);
 // console.log(`Обычный файл ${isAdmin || canWrite}`)
 // console.log(`Инвертируем права админа ${!isAdmin}`)
-
 // const isEdited = true;
 // const isSuperAdmin = true;
 // console.log(`Системный файл с редактированием ${
 //     isAdmin && canWrite && (!isEdited || isSuperAdmin)
 // }`)
-
 // const res = prompt(`Выборите имю`)
 // switch(true) {
 //     case res === true:
@@ -305,14 +302,12 @@
 //     default:
 //         console.log('Вы робот!');
 // }
-
 // const res = prompt(`Введите имя:`)
 // if (res === 'Daniar' || res == 'Nursultan') {
 //     console.log(true)
 // } else {
 //     console.log('вы робот')
 // }
-//## логический оператор
 // const login = prompt(`Введите логин`)
 // const paswword = prompt(`Введите пороль`)
 // const paswword1 = prompt(`Подвердите пороль`)
@@ -329,3 +324,21 @@
 //     console.log(`введен неправильно логин или пароль`)
 // }
 
+// ## Операторы с другими типами
+console.log(`Вася` || `Иван`);
+console.log(false || `Иван`);
+console.log(`Вася` || false);
+console.log(false || false);
+
+console.log(`Вася` && `Иван`);
+console.log(false && `Иван`);
+console.log(`Вася` && false);
+console.log(false && false);
+
+let a = 'Марина'
+const username = a || 'Петя';
+console.log(username);
+
+const isAdmin = false;
+const filename = isAdmin && 'file.mp4'
+console.log(filename);
