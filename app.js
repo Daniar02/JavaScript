@@ -408,7 +408,6 @@
 //     return num * num;
 // }
 // console.log(poft(6));
-
 // function iFamily(family, name) {
 //     console.log(`${family} ${name}`)
 // }
@@ -417,3 +416,16 @@
 //     return num1 + (num2 * num3) / num4
 // }
 // console.log(sum(1, 5, 2, 2));
+
+// ## Стрелочные функции
+function powerOfTwo(num) {
+    console.log(num)
+    return num * num 
+}
+console.log(powerOfTwo(5));
+// const poft = num => num * num;
+const poft = num => {
+    console.log(num)
+    return num * num
+}
+console.log(poft(6))
