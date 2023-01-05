@@ -448,3 +448,14 @@
 // }
 // console.log(toPower(2, 3))
 // console.log(toPower(2))
+
+// ## Условия в функциях
+// function canAccessWebsite(age) {
+//     if (age < 18){
+//         return false;
+//     } 
+//     return true;
+// }
+// console.log(canAccessWebsite(16));
+// const canAccessWebsite2 = age => age < 18 ? `нет` : `да`;
+// console.log(canAccessWebsite2(17))
