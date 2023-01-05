@@ -398,3 +398,22 @@
 // console.log(example1);
 // const example2 = countDepositSum(1000, 48, 0.10);
 // console.log(example2);
+
+// ## Анонимные функции.
+// function powerOfTwo(num) {
+//     return num * num;
+// }
+// console.log(powerOfTwo(5));
+// const poft = function (num) {
+//     return num * num;
+// }
+// console.log(poft(6));
+
+// function iFamily(family, name) {
+//     console.log(`${family} ${name}`)
+// }
+// iFamily('Абыкеев', 'Нурсултан');
+// function sum(num1, num2, num3, num4) {
+//     return num1 + (num2 * num3) / num4
+// }
+// console.log(sum(1, 5, 2, 2));
