@@ -418,14 +418,24 @@
 // console.log(sum(1, 5, 2, 2));
 
 // ## Стрелочные функции
-function powerOfTwo(num) {
-    console.log(num)
-    return num * num 
-}
-console.log(powerOfTwo(5));
-// const poft = num => num * num;
-const poft = num => {
-    console.log(num)
-    return num * num
-}
-console.log(poft(6))
+// function powerOfTwo(num) {
+//     console.log(num)
+//     return num * num 
+// }
+// console.log(powerOfTwo(5));
+// // const poft = num => num * num;
+// const poft = num => {
+//     console.log(num)
+//     return num * num
+// }
+// console.log(poft(6))
+
+// ##  Упрощение функции
+// function toPower(num, power) {
+//     const res = num ** power;
+//     return res;
+// }
+// console.log(toPower(2, 3));
+
+// const toPowerArrow = (num, power) => num ** power;
+// console.log(toPowerArrow(2, 3));
