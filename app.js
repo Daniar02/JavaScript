@@ -282,3 +282,50 @@
 //     console.log(res1 - res2);
 //     break;
 // }
+// const isAdmin = true;
+// const canWrite = true;
+
+// console.log(`Системный файл ${isAdmin && canWrite}`);
+// console.log(`Обычный файл ${isAdmin || canWrite}`)
+// console.log(`Инвертируем права админа ${!isAdmin}`)
+
+// const isEdited = true;
+// const isSuperAdmin = true;
+// console.log(`Системный файл с редактированием ${
+//     isAdmin && canWrite && (!isEdited || isSuperAdmin)
+// }`)
+
+// const res = prompt(`Выборите имю`)
+// switch(true) {
+//     case res === true:
+//     case res === 'daniar':
+//     case res === 'nursultan':  
+//     console.log(true);
+//     break;
+//     default:
+//         console.log('Вы робот!');
+// }
+
+// const res = prompt(`Введите имя:`)
+// if (res === 'Daniar' || res == 'Nursultan') {
+//     console.log(true)
+// } else {
+//     console.log('вы робот')
+// }
+//## логический оператор
+// const login = prompt(`Введите логин`)
+// const paswword = prompt(`Введите пороль`)
+// const paswword1 = prompt(`Подвердите пороль`)
+// if (paswword === paswword1) {
+//     console.log(`вы успешно зарегистрировались`)
+// } else {
+//     console.log(`Ошибка регистрации`)
+// }
+// const loginU = prompt(`Логин`)
+// const paswwordU = prompt(`пороль`) 
+// if (login === loginU && paswword === paswwordU) {
+//     console.log(`Прошло успешно`)
+// } else {
+//     console.log(`введен неправильно логин или пароль`)
+// }
+
