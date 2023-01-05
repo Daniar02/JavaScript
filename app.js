@@ -459,3 +459,23 @@
 // console.log(canAccessWebsite(16));
 // const canAccessWebsite2 = age => age < 18 ? `нет` : `да`;
 // console.log(canAccessWebsite2(17))
+
+// ## Функции в функциях
+// const KG_IN_USD = 7;
+// const KM_IN_USD = 5;
+// function calculateW(present) {
+//     return present * KG_IN_USD;
+// }
+// function calculateKm(distance) {
+//     return distance * KM_IN_USD;
+// }
+// function getExchagePrice(present1, present2, distance) {
+//     // const prise1 = present1 * KG_IN_USD;
+//     // const prise2 = present2 * KG_IN_USD;
+//     // const distancePrise = distance * KM_IN_USD;
+//     const prise1 = calculateW(present1);
+//     const prise2 = calculateW(present2);
+//     const distancePrise = calculateKm(distance);
+//     return prise1 + prise2 + distancePrise;
+// }
+// console.log(getExchagePrice(1, 2, 10));
