@@ -325,20 +325,76 @@
 // }
 
 // ## Операторы с другими типами
-console.log(`Вася` || `Иван`);
-console.log(false || `Иван`);
-console.log(`Вася` || false);
-console.log(false || false);
+// console.log(`Вася` || `Иван`);
+// console.log(false || `Иван`);
+// console.log(`Вася` || false);
+// console.log(false || false);
 
-console.log(`Вася` && `Иван`);
-console.log(false && `Иван`);
-console.log(`Вася` && false);
-console.log(false && false);
+// console.log(`Вася` && `Иван`);
+// console.log(false && `Иван`);
+// console.log(`Вася` && false);
+// console.log(false && false);
 
-let a = 'Марина'
-const username = a || 'Петя';
-console.log(username);
+// let a = 'Марина'
+// const username = a || 'Петя';
+// console.log(username);
 
-const isAdmin = false;
-const filename = isAdmin && 'file.mp4'
-console.log(filename);
+// const isAdmin = false;
+// const filename = isAdmin && 'file.mp4'
+// console.log(filename);
+
+// ## Оператор нулевого слияния
+// let username = "";
+// console.log(username || 'Default Username')
+// console.log(username ?? 'Default Username')
+// let age = 0;
+// console. log (age || 18);
+// console. log (age ?? 18);
+
+// ## Проверка прав
+// Пользователь хочет приобрести игру в магазине
+// Он может это сделать только если:
+// - Его баланс больше 1000 (balance) или число бонусов больше 100 (bonusBalance)
+// - Он не забанен (isBanned)
+// - Игра не куплена (isExist)
+// - Игра в продаже (isSelling)
+// Напишите услоовие для покупки и выведите в консоль результат
+// const balance = 1200;
+// const bonusBalance = 90;
+// const isBanned = false;
+// const isExist = false;
+// const isSelling = true;
+// const canBuy = (balance > 1000 || bonusBalance > 100)
+//     && !isBanned
+//     && !isExist
+//     && isSelling;
+// console.log(`Могу купить игру: ${canBuy ? 'Да' : 'Нет'}`);
+// const nameN = prompt('Ваедите имя')
+// if (nameN === "Nursultan" || nameN === "nursultan" || nameN === "Нурсултан" || nameN === "нурсултан") {
+//     console.log(true)
+// } else {     
+//     console.log(false)
+// }
+    // const family = prompt("Vedide family")
+    // const nameR = prompt("Vedide name")
+    // const ote = prompt("Vedide ote")
+    // const age = prompt("Vedite age")
+    // if (family === "Abykeev" && nameR === "Nursultan" && ote === "Rysbekovich" && age === "19") {
+    //  console.log(true)
+    // } else {
+    //     console.log(false)
+    // }
+
+//## Введение в функции
+// function logName(name, surname) {
+//     console.log(`Моё имя ${name} ${surname}`);
+// }
+// logName('Антон', 'Абыкеев');
+// function countDepositSum(depositInUSD, month, rate) {
+//     const sum = depositInUSD *(1 + rate / 12) ** month;
+//     return sum;
+// }
+// const example1 = countDepositSum(1000, 24, 0.12);
+// console.log(example1);
+// const example2 = countDepositSum(1000, 48, 0.10);
+// console.log(example2);
