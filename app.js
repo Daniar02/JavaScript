@@ -561,3 +561,23 @@
 // const el2 = users.shift();
 // console.log(el2)
 // console.log(users)
+
+// ## Поиск элемента
+const roles = ['user', 'admin', 'manager', 'daniar'];
+console.log(roles.indexOf('manager'));
+const elIndex = roles.indexOf('daniar');
+console.log(elIndex);
+const elIndex2 = roles.indexOf('superuser');
+console.log(elIndex2);
+if (roles.indexOf('manager') >= 1) {
+    console.log('Доступ есть')
+} else {
+    console.log('Доступ нет')
+}
+console.log(roles.includes('admin'));
+console.log(roles.includes('superuser'))
+if (roles.includes('admin')) {
+    console.log('Доступ есть');
+} else {
+    console.log('Доступ нет')
+}
