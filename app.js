@@ -3,7 +3,7 @@
 // a = 'test'
 // console.log(a)
 
-// Базовые арифметические операторы
+// ########################################## Базовые арифметические операторы ##########################################
 // const width = 10;
 // const height = 5;
 // const space = width * height; // пространство
@@ -13,12 +13,12 @@
 // const volume = 2 ** 3; // 2 * 2 * 2
 // console.log(volume);
 
-//Строки
+// ########################################## Строки ##########################################
 // const sity = 'Бишкек';
 // const street = 'Манас';
 // console.log(sity + ', ' + street + ' ' + 5)
 
-// Операторы присваивания
+// ########################################## Операторы присваивания ##########################################
 // let  age = 20; // возраст
 // age += 2; // возраст = возраст + 2
 // age -= 3; // возраст = возраст - 3
@@ -28,7 +28,7 @@
 // age -- ; // возраст = возраст - 1
 // console.log(age);
 
-//Операторы сравнения
+// ########################################## Операторы сравнения ##########################################
 // const vasia = 18;
 // console.log(age > vasia);
 // console.log(age >= vasia);
@@ -80,7 +80,7 @@
 - Сколько вы за неё попросите?
 */
 
-//Данные
+// ########################################## Данные ##########################################
 // const payRateUSD = 80;
 // const projectHours = 40;
 // const availableHours = (11 - 2) * 5;
@@ -112,7 +112,7 @@
 // console.log(true + 2);
 // const a = 2 + '10';
 // console.log(a - 10);
-//ложный
+// ########################################## ложный ##########################################
 // console.log(Boolean(0));
 // console.log(Boolean(''))
 // console.log(Boolean(undefined));
@@ -155,7 +155,7 @@
 // if (q == 7) {
 //     console.log(`!`)
 // }
-// switch
+// ########################################## switch ##########################################
 // const role = 'manager';
 // if (role === 'manager') {
 //     console.log('Менеджер')
@@ -202,7 +202,7 @@
 //         console.log('Ноль!')
 // }
 
-//Тернарный оператор
+// ########################################## Тернарный оператор ##########################################
 // const bmwX3Price = 100000;
 // const fordFocusPrice = 10000;
 // const budget = 20000;
@@ -231,7 +231,6 @@
 // } else {
 //     console.log(`Иди ты пожалуйста ${age} ${age - 18}`)
 // }
-
 // Методом prompt получите ответ пользователя на вопрос "Сколько будет 7 + или - 15?".
 // Если ответ верен выведите в консоле "Успех", если нет -"Вы робот!"
 // а если он введёт "Я не робот", то тоже "Успех"
@@ -259,7 +258,7 @@
 //             console.log('Вы робот!');
 //     }
 // }
-//  Домашняя работа
+// ########################################## Домашняя работа ##########################################
 // const res = prompt('Выборите + или -');
 // switch(true) {
 //     case res === '-':
@@ -281,7 +280,7 @@
 //     break;
 // }
 
-//## логический оператор
+// ########################################## логический оператор ##########################################
 // const isAdmin = true;
 // const canWrite = true;
 // console.log(`Системный файл ${isAdmin && canWrite}`);
@@ -324,7 +323,7 @@
 //     console.log(`введен неправильно логин или пароль`)
 // }
 
-// ## Операторы с другими типами
+// ########################################## Операторы с другими типами ##########################################
 // console.log(`Вася` || `Иван`);
 // console.log(false || `Иван`);
 // console.log(`Вася` || false);
@@ -343,7 +342,7 @@
 // const filename = isAdmin && 'file.mp4'
 // console.log(filename);
 
-// ## Оператор нулевого слияния
+// ########################################## Оператор нулевого слияния ##########################################
 // let username = "";
 // console.log(username || 'Default Username')
 // console.log(username ?? 'Default Username')
@@ -351,7 +350,7 @@
 // console. log (age || 18);
 // console. log (age ?? 18);
 
-// ## Проверка прав
+// ########################################## Проверка прав ##########################################
 // Пользователь хочет приобрести игру в магазине
 // Он может это сделать только если:
 // - Его баланс больше 1000 (balance) или число бонусов больше 100 (bonusBalance)
@@ -385,7 +384,7 @@
     //     console.log(false)
     // }
 
-//## Введение в функции
+// ########################################## Введение в функции ##########################################
 // function logName(name, surname) {
 //     console.log(`Моё имя ${name} ${surname}`);
 // }
@@ -399,7 +398,7 @@
 // const example2 = countDepositSum(1000, 48, 0.10);
 // console.log(example2);
 
-// ## Анонимные функции.
+// ########################################## Анонимные функции. ##########################################
 // function powerOfTwo(num) {
 //     return num * num;
 // }
@@ -417,7 +416,7 @@
 // }
 // console.log(sum(1, 5, 2, 2));
 
-// ## Стрелочные функции
+// ########################################## Стрелочные функции ##########################################
 // function powerOfTwo(num) {
 //     console.log(num)
 //     return num * num 
@@ -430,7 +429,7 @@
 // }
 // console.log(poft(6))
 
-// ##  Упрощение функции
+// ########################################## Упрощение функции ##########################################
 // function toPower(num, power) {
 //     const res = num ** power;
 //     return res;
@@ -439,7 +438,7 @@
 // const toPowerArrow = (num, power) => num ** power;
 // console.log(toPowerArrow(2, 3));
 
-// ## Параметры по умолчанию
+// ########################################## Параметры по умолчанию ##########################################
 // function toPower(num, power = 2) {
 //     // console.log(typeof power)
 //     // const power2 = power ?? 2;
@@ -449,7 +448,7 @@
 // console.log(toPower(2, 3))
 // console.log(toPower(2))
 
-// ## Условия в функциях
+// ########################################## Условия в функциях ##########################################
 // function canAccessWebsite(age) {
 //     if (age < 18){
 //         return false;
@@ -460,7 +459,7 @@
 // const canAccessWebsite2 = age => age < 18 ? `нет` : `да`;
 // console.log(canAccessWebsite2(17))
 
-// ## Функции в функциях
+// ########################################## Функции в функциях ##########################################
 // const KG_IN_USD = 7;
 // const KM_IN_USD = 5;
 // function calculateW(present) {
@@ -480,7 +479,7 @@
 // }
 // console.log(getExchagePrice(1, 2, 10));
 
-// ##  Упражнение - Кредит на MacBook.
+// ##########################################  Упражнение - Кредит на MacBook. ##########################################
 /*
 	Пользователь:
 	- Возраст
@@ -510,7 +509,7 @@
 // }
 // console.log(canBuy(2000, 25, 1900, true));
 
-// ## Знакомство с массивами.
+// ########################################## Знакомство с массивами. ##########################################
 // const role1 = 'admin'
 // const role2 = 'user'
 // const role3 = 'superuser'
@@ -543,7 +542,7 @@
 // name1 === 'nursultan' ? console.log(' Nursultan') :
 // console.log('no');
 
-// ## Управление элементами массива
+// ########################################## Управление элементами массива ##########################################
 // const users = ['Аня', 'Вика', 'Катя'];
 // console.log(users)
 // users[2] = 'Кристина';
@@ -562,22 +561,61 @@
 // console.log(el2)
 // console.log(users)
 
-// ## Поиск элемента
-const roles = ['user', 'admin', 'manager', 'daniar'];
-console.log(roles.indexOf('manager'));
-const elIndex = roles.indexOf('daniar');
-console.log(elIndex);
-const elIndex2 = roles.indexOf('superuser');
-console.log(elIndex2);
-if (roles.indexOf('manager') >= 1) {
-    console.log('Доступ есть')
-} else {
-    console.log('Доступ нет')
-}
-console.log(roles.includes('admin'));
-console.log(roles.includes('superuser'))
-if (roles.includes('admin')) {
-    console.log('Доступ есть');
-} else {
-    console.log('Доступ нет')
-}
+// ########################################## Поиск элемента ##########################################
+// const roles = ['user', 'admin', 'manager', 'daniar'];
+// console.log(roles.indexOf('manager'));
+// const elIndex = roles.indexOf('daniar');
+// console.log(elIndex);
+// const elIndex2 = roles.indexOf('superuser');
+// console.log(elIndex2);
+// if (roles.indexOf('manager') >= 1) {
+//     console.log('Доступ есть')
+// } else {
+//     console.log('Доступ нет')
+// }
+// console.log(roles.includes('admin'));
+// console.log(roles.includes('superuser'))
+// if (roles.includes('admin')) {
+//     console.log('Доступ есть');
+// } else {
+//     console.log('Доступ нет')
+// }
+
+// ########################################## Slice, splice, concat, reverse ##########################################
+const roles = ['user', 'admin', 'manager', 'superuser'];
+
+const res = roles.slice(2);
+console.log(roles);
+console.log(res);
+
+const res2 = roles.slice(2, 3);
+console.log(roles);
+console.log(res2);
+
+const res3 = roles.slice(-1);
+console.log(roles);
+console.log(res3);
+
+const res4 = roles.slice(1, -2);
+console.log(roles);
+console.log(res4)
+
+const res5 = roles.splice(2);
+console.log(roles);
+console.log(res5);
+
+const res6 = roles.splice(2, 1);
+console.log(roles);
+console.log(res6);
+
+const res7 = roles.splice(-1);
+console.log(roles);
+console.log(res7);
+
+const res8 = roles.reverse();
+console.log(roles);
+console.log(res8);
+
+const newRoles = ['sysandmin', 'developer'];
+const res9 = roles.concat(newRoles);
+console.log(res9)
