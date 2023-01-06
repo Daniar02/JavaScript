@@ -529,3 +529,35 @@
 //     return el * el;
 // }
 // console.log(square(5))
+// const nameN = prompt('Введите имя')
+// nameN === 'nursultan' ? console.log('Nursultan') : console.log('Error');
+// if (nameN === 'nursultan') {
+//     console.log("Nursultan")
+// } else if (nameN === 'daniar') {
+//     console.log("Daniar")
+// } else {
+//     console.log('Error')
+// }
+// const name1 = prompt('Введите имя')
+// name1 === 'daniar' ? console.log('Daniar') : 
+// name1 === 'nursultan' ? console.log(' Nursultan') :
+// console.log('no');
+
+// ## Управление элементами массива
+// const users = ['Аня', 'Вика', 'Катя'];
+// console.log(users)
+// users[2] = 'Кристина';
+// console.log(users)
+// users[3] = 'Никита';
+// console.log(users);
+// const arrlenght = users.push('Нурсултан');
+// console.log(users);
+// console.log(arrlenght)
+// users.unshift('Нурболот');
+// console.log(users)
+// const el = users.pop(0);
+// console.log(el);
+// console.log(users);
+// const el2 = users.shift();
+// console.log(el2)
+// console.log(users)
