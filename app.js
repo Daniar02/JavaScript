@@ -635,36 +635,65 @@
 // Удаление задачи по названию
 // Перенос задачи в начало списка по названию
 // Всегда меняем исходный массив
-const tasks = ['Задача 1'];
-const tasks1 = tasks.push('Задача 2')
-console.log(tasks)
-function Add(task) {
-    tasks.push(task)
-};
+// const tasks = ['Задача 1'];
+// const tasks1 = tasks.push('Задача 2')
+// console.log(tasks)
+// function Add(task) {
+//     tasks.push(task)
+// };
 
-function Remove(task) {
-    const index = tasks.indexOf(task);
-    if (index === -1) {
-        return;
-    }
-    tasks.splice(index, 1)
-};
+// function Remove(task) {
+//     const index = tasks.indexOf(task);
+//     if (index === -1) {
+//         return;
+//     }
+//     tasks.splice(index, 1)
+// };
 
-function Prioritize(task) {
-    const index = tasks.indexOf(task)
-    if (index === -1) {
-        return;
-    }
-    const oldTask = tasks[index];
-    tasks.splice(index, 1);
-    tasks.unshift(oldTask);
-}
-Add('Задача 2');
-Add('Задача 3');
-console.log(tasks);
+// function Prioritize(task) {
+//     const index = tasks.indexOf(task)
+//     if (index === -1) {
+//         return;
+//     }
+//     const oldTask = tasks[index];
+//     tasks.splice(index, 1);
+//     tasks.unshift(oldTask);
+// }
+// Add('Задача 2');
+// Add('Задача 3');
+// console.log(tasks);
 
-Remove('Задача 4');
-console.log(tasks);
+// Remove('Задача 4');
+// console.log(tasks);
 
-Prioritize('Задача 3');
-console.log(tasks);
+// Prioritize('Задача 3');
+// console.log(tasks);
+
+// ########################################## Принцип DRY ##########################################
+// function Remove(task) {
+//     const index = tasks.indexOf(task);
+//     if (index === -1) {
+//         return;
+//     }
+//    return tasks.splice(index, 1)
+// };
+
+// function Prioritize(task) {
+//     const result =  Remove(task);
+//     if (!result) {
+//          return;
+//      }
+//      tasks.unshift(result[0])  
+// }
+
+// ########################################## Деструктуризация ##########################################
+// const userData = ['Антон', 18, 'Москва']
+// // function getData() {
+// //     return ['Антон', 18, 'Москва'];
+// // }
+// // const userName = getData()[0];
+// // const age = getData()[1];
+// // const sity = getData()[2];
+// const [userName, _, sity] = userData;
+
+// console.log(userName, sity);
