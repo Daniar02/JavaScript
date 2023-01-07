@@ -845,48 +845,89 @@
 // баланс < 0, то выдавать false)
 // - Расчёта среднего расхода и среднего дохода
 
-const operations = [1000, -700, 300, -500, 10000];
-const startinngBalance = 100;
+// const operations = [1000, -700, 300, -500, 10000];
+// const startinngBalance = 100;
 
-function getBalance(arrayOfOperations, initailBalance) {
-    let balance = initailBalance;
-    for (const element of arrayOfOperations) {
-        balance += element;
-    }
-    return balance;
-}
-console.log(getBalance(operations, startinngBalance));
+// function getBalance(arrayOfOperations, initailBalance) {
+//     let balance = initailBalance;
+//     for (const element of arrayOfOperations) {
+//         balance += element;
+//     }
+//     return balance;
+// }
+// console.log(getBalance(operations, startinngBalance));
 
-    function chekOperations(arrayOfOperations, initailBalance) {
-        let balance = initailBalance;
-        let isOk = true;
-    for (const element of arrayOfOperations) {
-        balance += element;
-        if (balance < 0) {
-            isOk = false;
-            break;
-        }
-    }
-    return isOk
-}
+//     function chekOperations(arrayOfOperations, initailBalance) {
+//         let balance = initailBalance;
+//         let isOk = true;
+//     for (const element of arrayOfOperations) {
+//         balance += element;
+//         if (balance < 0) {
+//             isOk = false;
+//             break;
+//         }
+//     }
+//     return isOk
+// }
 
-console.log(chekOperations(operations, startinngBalance));
+// console.log(chekOperations(operations, startinngBalance));
 
-function avarageOperations(arrayOfOperations) {
-    let positiveCount = 0;
-    let positiveSum = 0;
-    let negativeCount = 0;
-    let negativeSum = 0;
-    for (const element of arrayOfOperations) {
-        if (element > 0) {
-            positiveCount++
-            positiveSum += element
-        }
-        if (element < 0) {
-            negativeCount++
-            negativeSum += element
-        }
-    }
-    return [positiveSum / positiveCount, negativeSum / negativeCount];
-}
-console.log(avarageOperations(operations))
+// function avarageOperations(arrayOfOperations) {
+//     let positiveCount = 0;
+//     let positiveSum = 0;
+//     let negativeCount = 0;
+//     let negativeSum = 0;
+//     for (const element of arrayOfOperations) {
+//         if (element > 0) {
+//             positiveCount++
+//             positiveSum += element
+//         }
+//         if (element < 0) {
+//             negativeCount++
+//             negativeSum += element
+//         }
+//     }
+//     return [positiveSum / positiveCount, negativeSum / negativeCount];
+// }
+// console.log(avarageOperations(operations))
+
+// ########################################## Функции высшего порядка {Callback} ##########################################
+
+// function add(a, b) {
+//     return a + b;
+// }
+// function subtract(a, b) {
+//     return a - b;
+// }
+// function power(a, b,) {
+//     return a**b;
+// }
+// // ## Функции высшего порядка
+// function calculate(a, b, fn) {
+//     console.log(fn.name);
+//     const res = fn(a, b);
+//     return res;
+// }
+
+// let res = calculate(3, 5, subtract);
+// console.log(res)
+// res = calculate(3, 5, add);
+// console.log(res);
+// res = calculate(3, 5, power);
+// console.log(res);
+
+// ########################################## Возврат функции. ##########################################
+
+// function power(pow) {
+//     return function (num) {
+//         return num+pow;
+//     }
+// }
+// const powerOfTwo = power(2);
+// console.log(powerOfTwo(5));
+// console.log(powerOfTwo(10));
+
+// const powerOfThree = power(3);
+// console.log(powerOfThree(5));
+
+// console.log(power(5)(4));
