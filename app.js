@@ -783,9 +783,54 @@
 //     }
 // }
 
-const tasks = [[1, 'Задача 1'], [2, 'Задача 2']];
-for (let i = 0; i < tasks.length; i++) {
-    for (let j = 0; j < tasks[i].length; j++) {
-        console.log(tasks[i][j])
-    }
-}
+// const tasks = [[1, 'Задача 1'], [2, 'Задача 2']];
+// for (let i = 0; i < tasks.length; i++) {
+//     for (let j = 0; j < tasks[i].length; j++) {
+//         console.log(tasks[i][j])
+//     }
+// }
+
+// ########################################## Цикл while ##########################################
+// for (let i = 1; i < 5; i++) {
+//     console.log(` Цикл  ${i}`)
+// }
+
+// let i = 1;
+// while (i < 5) {
+//     console.log(` Цикл  ${i}`)
+//     i++
+// }
+
+// const arr = [1, 4, 8, 7]
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 5) {
+//         break;
+//     }
+//     console.log(arr[i]);
+// }
+// let i = 0;
+// while (arr[i] <= 5 && i < arr.length) {
+//     console.log(arr[i]);
+//     i++;
+// }
+
+// let j = 0
+// do {
+//     console.log(j)
+//  j++
+// } while(j < 1)
+
+// ########################################## Циклы for of и for in ##########################################
+// const arr = [1, 4, 8, 7];
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// for (let element of arr) {
+//     console.log(element)
+// }
+
+// for (index in arr) {
+//     console.log(index)
+// }
