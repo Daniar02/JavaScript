@@ -727,32 +727,65 @@
 // getUrlParts(url2)
 
 // ##########################################  Цикл for. ##########################################
-console.log('Наш баланс 1$');
-console.log('Наш баланс 2$');
-console.log('Наш баланс 3$');
-console.log('Наш баланс 4$');
-console.log('Наш баланс 5$');
-console.log('Наш баланс 6$');
-console.log('Наш баланс 7$');
-console.log('Наш баланс 8$');
-console.log('Наш баланс 9$');
-for (let i = 1; i < 10; i++) {
-    console.log(`Наш баланс ${i}$`);
-}
+// console.log('Наш баланс 1$');
+// console.log('Наш баланс 2$');
+// console.log('Наш баланс 3$');
+// console.log('Наш баланс 4$');
+// console.log('Наш баланс 5$');
+// console.log('Наш баланс 6$');
+// console.log('Наш баланс 7$');
+// console.log('Наш баланс 8$');
+// console.log('Наш баланс 9$');
+// for (let i = 1; i < 10; i++) {
+//     console.log(`Наш баланс ${i}$`);
+// }
 
 // ##########################################  Break и continue. ##########################################
-const tasks = ['Задача 1', 'Задача 2', 'Задача 3'];
-// console.log(tasks[0]);
-for(let i = 0; i < tasks.length; i++ ) {
-    if (tasks[i] === 'Задача 2') {
-        continue;
+// const tasks = ['Задача 1', 'Задача 2', 'Задача 3'];
+// // console.log(tasks[0]);
+// for(let i = 0; i < tasks.length; i++ ) {
+//     if (tasks[i] === 'Задача 2') {
+//         continue;
+//     }
+//     console.log(tasks[i]);
+// }
+// console.log("---------");
+// for(let i = 0; i < tasks.length; i++) {
+//     if (tasks[i] === 'Задача 3') {
+//         break;
+//     }
+//     console.log(tasks[i])
+// }
+
+// ########################################## Цикл в обратном порядке ##########################################
+// Задача вывести в консоль строку "Я люблю JS !" из массива,
+//  проходя циклом в обратном порядке, не используя метод reverse.
+// const arr = '!' "JS', "люблю" 'Я'];
+
+// const arr = ['!', "js", "люблю", 'Я'];
+// const resultArray = [] ;
+
+// for (let i = arr.length - 1; i >= 0 ; i--) {
+//     resultArray.push(arr[i])
+// }
+// console.log (resultArray.join (' '));
+
+// const user = prompt("Введите значение")
+// const massiv  = [...user]
+// const res = massiv.reverse().join('')
+// console.log(res)
+
+// ########################################## Цикл в цикле ##########################################
+// for (let i = 1; i < 5; i++) {
+//     console.log(`Цикл  ${i}`);
+//     for (let j = 1; j < 5; j++) {
+//         console.log(`Дом ${j}`)
+//     }
+// }
+
+const tasks = [[1, 'Задача 1'], [2, 'Задача 2']];
+for (let i = 0; i < tasks.length; i++) {
+    for (let j = 0; j < tasks[i].length; j++) {
+        console.log(tasks[i][j])
     }
-    console.log(tasks[i]);
-}
-console.log("---------");
-for(let i = 0; i < tasks.length; i++) {
-    if (tasks[i] === 'Задача 3') {
-        break;
-    }
-    console.log(tasks[i])
 }
