@@ -582,40 +582,89 @@
 // }
 
 // ########################################## Slice, splice, concat, reverse ##########################################
-const roles = ['user', 'admin', 'manager', 'superuser'];
+// const roles = ['user', 'admin', 'manager', 'superuser'];
 
-const res = roles.slice(2);
-console.log(roles);
-console.log(res);
+// const res = roles.slice(2);
+// console.log(roles);
+// console.log(res);
 
-const res2 = roles.slice(2, 3);
-console.log(roles);
-console.log(res2);
+// const res2 = roles.slice(2, 3);
+// console.log(roles);
+// console.log(res2);
 
-const res3 = roles.slice(-1);
-console.log(roles);
-console.log(res3);
+// const res3 = roles.slice(-1);
+// console.log(roles);
+// console.log(res3);
 
-const res4 = roles.slice(1, -2);
-console.log(roles);
-console.log(res4)
+// const res4 = roles.slice(1, -2);
+// console.log(roles);
+// console.log(res4)
 
-const res5 = roles.splice(2);
-console.log(roles);
-console.log(res5);
+// const res5 = roles.splice(2);
+// console.log(roles);
+// console.log(res5);
 
-const res6 = roles.splice(2, 1);
-console.log(roles);
-console.log(res6);
+// const res6 = roles.splice(2, 1);
+// console.log(roles);
+// console.log(res6);
 
-const res7 = roles.splice(-1);
-console.log(roles);
-console.log(res7);
+// const res7 = roles.splice(-1);
+// console.log(roles);
+// console.log(res7);
 
-const res8 = roles.reverse();
-console.log(roles);
-console.log(res8);
+// const res8 = roles.reverse();
+// console.log(roles);
+// console.log(res8);
 
-const newRoles = ['sysandmin', 'developer'];
-const res9 = roles.concat(newRoles);
-console.log(res9)
+// const newRoles = ['sysandmin', 'developer'];
+// const res9 = roles.concat(newRoles);
+// console.log(res9)
+
+// ########################################## Slice, splice, concat, reverse ##########################################
+// const roles = ['user', 'admin','manager','superuser'];
+// const url = ['auth/user/login'];
+// const res = url.split('/');
+// console.log(res);
+// console.log(roles.join('-'));
+
+// ########################################## Обновление списка задач ##########################################
+// Дан список задач
+// const tasks = ['Задача 1'];
+// Сделать функции:
+// - Добавление задачи в конец
+// Удаление задачи по названию
+// Перенос задачи в начало списка по названию
+// Всегда меняем исходный массив
+const tasks = ['Задача 1'];
+const tasks1 = tasks.push('Задача 2')
+console.log(tasks)
+function Add(task) {
+    tasks.push(task)
+};
+
+function Remove(task) {
+    const index = tasks.indexOf(task);
+    if (index === -1) {
+        return;
+    }
+    tasks.splice(index, 1)
+};
+
+function Prioritize(task) {
+    const index = tasks.indexOf(task)
+    if (index === -1) {
+        return;
+    }
+    const oldTask = tasks[index];
+    tasks.splice(index, 1);
+    tasks.unshift(oldTask);
+}
+Add('Задача 2');
+Add('Задача 3');
+console.log(tasks);
+
+Remove('Задача 4');
+console.log(tasks);
+
+Prioritize('Задача 3');
+console.log(tasks);
