@@ -710,18 +710,49 @@
 // Протокол (https)
 // Доменное имя (purpleschool.ru)
 // Путь внутри сайта (/course/javascript)
-const url = "https://purpleschool.ru/course/javascript";
-const url2 = "https://purpleschool..ru/course/javascript";
-function getUrlParts(url) {
-    const [protocol, _, host, ...path] = url.split('/');
-    if (protocol === 'http:' || protocol === 'https:') {
-        if (!host.includes('.')) {
-            return;
-        }
-        console.log(protocol, _, host, path);
-        console.log(`Протокол: ${protocol.split(':')[0]}`);
-        console.log(`Доменное имя ${host}`);
-        console.log(`Путь внутри сайт /${path.join('/')}`)
-    }
+// const url = "https://purpleschool.ru/course/javascript";
+// const url2 = "https://purpleschool..ru/course/javascript";
+// function getUrlParts(url) {
+//     const [protocol, _, host, ...path] = url.split('/');
+//     if (protocol === 'http:' || protocol === 'https:') {
+//         if (!host.includes('.')) {
+//             return;
+//         }
+//         console.log(protocol, _, host, path);
+//         console.log(`Протокол: ${protocol.split(':')[0]}`);
+//         console.log(`Доменное имя ${host}`);
+//         console.log(`Путь внутри сайт /${path.join('/')}`)
+//     }
+// }
+// getUrlParts(url2)
+
+// ##########################################  Цикл for. ##########################################
+console.log('Наш баланс 1$');
+console.log('Наш баланс 2$');
+console.log('Наш баланс 3$');
+console.log('Наш баланс 4$');
+console.log('Наш баланс 5$');
+console.log('Наш баланс 6$');
+console.log('Наш баланс 7$');
+console.log('Наш баланс 8$');
+console.log('Наш баланс 9$');
+for (let i = 1; i < 10; i++) {
+    console.log(`Наш баланс ${i}$`);
 }
-getUrlParts(url2)
+
+// ##########################################  Break и continue. ##########################################
+const tasks = ['Задача 1', 'Задача 2', 'Задача 3'];
+// console.log(tasks[0]);
+for(let i = 0; i < tasks.length; i++ ) {
+    if (tasks[i] === 'Задача 2') {
+        continue;
+    }
+    console.log(tasks[i]);
+}
+console.log("---------");
+for(let i = 0; i < tasks.length; i++) {
+    if (tasks[i] === 'Задача 3') {
+        break;
+    }
+    console.log(tasks[i])
+}
