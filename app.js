@@ -923,6 +923,8 @@
 //         return num+pow;
 //     }
 // }
+// const power = pow => num => pow+num
+
 // const powerOfTwo = power(2);
 // console.log(powerOfTwo(5));
 // console.log(powerOfTwo(10));
@@ -931,3 +933,27 @@
 // console.log(powerOfThree(5));
 
 // console.log(power(5)(4));
+
+// ########################################## Домашняя работа ##########################################
+
+// const res = prompt("Введите имя")
+// const i = res[0].toUpperCase() + res;
+// console.log(i)
+
+// const res = prompt("Введите пороль");
+// const res1 = prompt("Подвердите пороль");
+// const i = res.toLowerCase()
+// const j = res1.toLowerCase()
+// if (i === j) {
+//     console.log(true)
+// } else {
+//     console.log(false)
+// };
+
+// for (let i = 0; i < 11; i++) {
+//     if (i % 2 == 1) {
+//         console.log(i)
+//     }
+// }   
+
+
