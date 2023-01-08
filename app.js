@@ -956,4 +956,65 @@
 //     }
 // }   
 
+// ########################################## forEach ##########################################
+// const score = [5, 10, 0, 15]
+// for(const [i, el] of score.entries()) {
+//     console.log(`Раунд: ${i + 1} ${el}`)
+// }
 
+// score.forEach((scroleEL, i) => {
+//     console.log(`Раунд: ${i + 1} ${scroleEL}`)
+// })
+// (5, 0) => {...};
+// (10, 0) => {...};
+// ########################################## map ##########################################   
+// const transactionInUSD = [10, -7, 50, -10, 100];
+
+// const transactionInRUB = []
+// for (const transaction of transactionInUSD) {
+//     transactionInRUB.push(transaction * 60)
+// }
+
+// console.log(transactionInUSD);
+// console.log(transactionInRUB);
+
+// // map
+// const transactionInRUB2 = transactionInUSD.map((transaction) => {
+//  return transaction * 60
+// })
+// console.log(transactionInUSD);
+// console.log(transactionInRUB2);
+
+// ########################################## filter ########################################## 
+// const operations = [100, -20, 7, -20, 50];
+// // const positiveOperations = [];
+// // for (const operation of operations) {
+// //     if (operation > 0) {
+// //         positiveOperations.push(operation);
+// //     }
+// // }
+// // console.log(positiveOperations);
+
+// const positiveOperations = operations.filter((operation) => {
+//     return operation > 0;
+// })  
+// console.log(positiveOperations);
+
+// const positiveRUBOperations = operations
+//     .filter(operation => {
+//         return operation > 0;
+//     })
+//     .map(operation => operation + 60);
+// console.log(positiveRUBOperations);
+
+// ########################################## Упражнение - вывод изменений цен ##########################################
+// Имеется массив изменения цен prices, где внутри
+// 1й элемент массива является ценой в момент Х,
+// 2й - ценой в момент Y.
+// Нужно преобразовать данные в массив, где будут отображены
+// только положительные изменения цен: [100, 150]
+// const prices = [[100, 200], [120, 100], [200, 350]];
+// const result = prices
+//     .map(product => product[1] - product[0])
+//     .filter(price => price > 0);
+// console.log(result);
