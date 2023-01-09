@@ -1059,3 +1059,32 @@
 //     }
 // },0)
 // console.log(avg)
+
+// ########################################## find и findIndex ##########################################
+// const arr = [2, 4, 4, 10];
+// let elGT5;
+// for (const el of arr) {
+//     if (el > 5) {
+//         elGT5 = el;
+//         break;
+//     }
+// }
+// console.log(elGT5)
+
+// elGT5 = arr.find(el => el > 5);
+// findIndex = arr.findIndex(el => el > 5);
+// console.log(elGT5);
+// console.log(findIndex)
+
+// ########################################## Упражнение - реализация some. ##########################################
+// Написать функцию, которые возващает true, 
+// если элемент есть, u false, если нет.
+
+// const arr = [2, 4, 4, 10, 20];
+// function some(array, element) {
+//     const res = array.find(el => el === element);
+//     return res == undefined ? false : true;
+// }
+// console.log(some(arr, 0));
+
+// console.log(arr.some(el => el === 2));
