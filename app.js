@@ -1088,3 +1088,38 @@
 // console.log(some(arr, 0));
 
 // console.log(arr.some(el => el === 2));
+
+// ########################################## flat и flatMap ##########################################
+// const prices = [[2, 4], [3, 4], [10, [20, 50]]];
+// const res = prices.flat(2);
+// const res2 = prices.flatMap(el => el.concat([]));
+// console.log(res);
+// console.log(res2);
+
+// ########################################## sort ##########################################
+// const users = ['Вас', 'Маша', 'Катя', 'Аня']
+// console.log(users);
+// users.sort();
+// console.log(users);
+// const operations = [-20, -300, -100, 50, 480];
+// console.log(operations);
+
+// operations.sort((a, b) =>  a - b
+//     // if (a > b) {
+//     //     return 1;
+//     // }
+//     // if (a < b) {
+//     //     return -1;
+//     // }
+// );
+// console.log(operations);
+
+// operations.sort((a, b) => {
+//     if (a < b) {
+//         return 1;
+//     }
+//     if (a > b) {
+//         return -1;
+//     }
+// })
+// console.log(operations);
