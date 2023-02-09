@@ -1162,18 +1162,83 @@
 // console.log(string.trimEnd()); // (удаляет пробелов end "  Нурсултан")
 // console.log(string.trimStart()); // (удаляет пробелов start "Нурсултан  ")
 
-function logPerson(s, name, age) {
-    if (age < 0) {
-        age = 'Еще не родился';
-    }
-    return `${s[0]}${name}${s[1]}${age}${s[2]}`;
+// function logPerson(s, name, age) {
+//     if (age < 0) {
+//         age = 'Еще не родился';
+//     }
+//     return `${s[0]}${name}${s[1]}${age}${s[2]}`;
+// }
+//
+// const personName = "Нурсултан";
+// const personName2 = "Нурболот";
+// const personAge = 25;
+// const personAge2 = -10;
+// const output = logPerson`Имя: ${personName}, Возраст: ${personAge}!`;
+// const output2 = logPerson`Имя: ${personName2}, Возраст: ${personAge2}!`;
+// console.log(output);
+// console.log(output2);
+
+// ############################ Функции ############################
+
+// // 1) Function Declaration
+// function greet(name) {
+//     console.log("Привет - ", name)
+// }
+//
+// // Function Expression
+// const greet2 = function (name) {
+//     console.log("Привет 2 -", name)
+// }
+//
+// greet("Лена");
+// greet2("Лена")
+
+// 2) Анонимный функции
+
+// let counter = 0;
+// const interval = setInterval(function(){
+//     if (counter === 5) {
+//         clearInterval(interval) //clearTimeout
+//     } else {
+//         console.log(++counter)
+//     }
+// }, 1000);
+
+// 3) Стрелочные Функции
+
+// const arrow = (name) => {
+//     console.log("Привет 3 -", name)
+// }
+//
+// const arrow2 = name => console.log("Привет 3 -", name)
+// arrow2("Нурболот")
+//
+// const pow = num => num ** 2
+// console.log(pow(5));
+
+// 4) Параметры по умолчанию
+
+// const sum = (a, b =1) => a + b
+// console.log(sum(41, 1))
+
+// function sumAll(...all) {
+//     let result = 0;
+//     for (let num of all) {
+//         result += num
+//     }
+//     return result
+// }
+// const res = sumAll(1, 2, 3, 4, 5);
+// console.log(res)
+
+// Замыкания
+
+function createMamber(name) {
+    return function (lastName) {
+        console.log(name + lastName);
+    };
 }
 
-const personName = "Нурсултан";
-const personName2 = "Нурболот";
-const personAge = 25;
-const personAge2 = -10;
-const output = logPerson`Имя: ${personName}, Возраст: ${personAge}!`;
-const output2 = logPerson`Имя: ${personName2}, Возраст: ${personAge2}!`;
-console.log(output);
-console.log(output2);
+const logWithLastName = createMamber("Нурсултан");
+console.log(logWithLastName('Нурболот'));
+console.log(logWithLastName('Адилет'));
