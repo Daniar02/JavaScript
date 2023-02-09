@@ -1123,3 +1123,57 @@
 //     }
 // })
 // console.log(operations);
+
+// ########################################## Быстрое создание массивов ##########################################
+// const arr = [1, 2, 3, 4, 5];
+
+// console.log(new Array(1, 2, 3, 4, 5));
+
+// const arr2 = new Array(5);
+// console.log(arr2);
+// arr2.fill(1, 0, 3);
+// arr2.fill(2, 3, 5)
+// console.log(arr2);
+
+// const arr3 = Array.from({ length: 5}, () => );
+// console.log(arr3)
+
+// ############################ Строки ############################
+
+// const nameN = "Нурсултан";
+// const age = 25;
+// function  getAge() {
+//     return age;
+// }
+// const outpit = `Привет: меня зовут ${nameN} и мой возраст ${age < 20 ? "A" : "B"} лет.`;
+// console.log(outpit);
+
+// const neme = "Нурсултан";
+// console.log(neme.length); // (Длина)
+// console.log(neme.toUpperCase()); // (верхний регистр)
+// console.log(neme.toLowerCase()); // (нижний регистр)
+// console.log(neme.charAt(2)); // (возвращает указанный символ из строки)
+// console.log(neme.indexOf("тан")); // (воз-в первого вхождения указанного значения в строковый объект,если не-н -1)
+// console.log(neme.startsWith("Нур")); // (true)
+// console.log(neme.endsWith("тан")); // (true)
+// console.log(neme.repeat(3)); // (НурсултанНурсултанНурсултан)
+// const string = '  Нурсултан   ';
+// console.log(string.trim()); // (удаляет пробелов "Нурсултан")
+// console.log(string.trimEnd()); // (удаляет пробелов end "  Нурсултан")
+// console.log(string.trimStart()); // (удаляет пробелов start "Нурсултан  ")
+
+function logPerson(s, name, age) {
+    if (age < 0) {
+        age = 'Еще не родился';
+    }
+    return `${s[0]}${name}${s[1]}${age}${s[2]}`;
+}
+
+const personName = "Нурсултан";
+const personName2 = "Нурболот";
+const personAge = 25;
+const personAge2 = -10;
+const output = logPerson`Имя: ${personName}, Возраст: ${personAge}!`;
+const output2 = logPerson`Имя: ${personName2}, Возраст: ${personAge2}!`;
+console.log(output);
+console.log(output2);
