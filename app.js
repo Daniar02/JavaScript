@@ -1233,12 +1233,45 @@
 
 // Замыкания
 
-function createMamber(name) {
-    return function (lastName) {
-        console.log(name + lastName);
-    };
-}
+// function createMamber(name) {
+//     return function (lastName) {
+//         console.log(name + lastName);
+//     };
+// }
+//
+// const logWithLastName = createMamber("Нурсултан");
+// console.log(logWithLastName('Нурболот'));
+// console.log(logWithLastName('Адилет'));
 
-const logWithLastName = createMamber("Нурсултан");
-console.log(logWithLastName('Нурболот'));
-console.log(logWithLastName('Адилет'));
+// ############################ Массивы ############################
+const cars = ["Мазда", "Форд", "БМВ", "Мерседес"];
+const people = [
+    {name: "Vladilin", budget: 4200},
+    {name: "Elena", budget: 3500},
+    {name: "Victoria", budget: 1700},
+]
+// const fib = [1, 1, 2, 3, 5, 8, 13]
+//
+// // Method
+// cars.push("Рено"); // (добавить в конец массива)
+// cars.unshift("Волга") // (добавить в начало массива)
+// cars.shift() // (удаляет первый элемент из массива)
+// cars.pop()// (удаляет последний элемент из массива)
+// cars.reverse() // (Перевёрнутый массив)
+// console.log(cars)
+
+// const index = cars.indexOf("Форд");
+// cars[index] = "Лада";
+// console.log(cars)
+
+const index = people.findIndex(function (percon) {
+    return percon.budget === 3500
+});
+console.log(people[index]);
+
+
+
+// Задача 1
+// const text = "Я, люблю Js"
+// const reverseText = text.split(",").reverse().join(' ')
+// console.log(reverseText)
