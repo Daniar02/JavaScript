@@ -1245,12 +1245,12 @@
 
 // ############################ Массивы ############################
 const cars = ["Мазда", "Форд", "БМВ", "Мерседес"];
-const people = [
-    {name: "Vladilin", budget: 4200},
-    {name: "Elena", budget: 3500},
-    {name: "Victoria", budget: 1700},
-]
-// const fib = [1, 1, 2, 3, 5, 8, 13]
+// const people = [
+//     {name: "Vladilin", budget: 4200},
+//     {name: "Elena", budget: 3500},
+//     {name: "Victoria", budget: 1700},
+// ]
+const fib = [1, 1, 2, 3, 5, 8, 13]
 //
 // // Method
 // cars.push("Рено"); // (добавить в конец массива)
@@ -1264,12 +1264,30 @@ const people = [
 // cars[index] = "Лада";
 // console.log(cars)
 
-const index = people.findIndex(function (percon) {
-    return percon.budget === 3500
-});
-console.log(people[index]);
+// let findedPerson
+// for (const person of people) {
+//     if (person.budget === 3500) {
+//         findedPerson = person
+//     }
+// }
+// console.log(findedPerson);
 
+// const index = people.findIndex(function (percon) {
+//     return percon.budget === 3500
+// });
+// console.log(people[index])
 
+// const person = people.find(person => person.budget === 3500);
+// console.log(person);
+
+const toUppercCaseCar = cars.map(car => {
+    return car.toUpperCase()
+})
+const sqrt = num => Math.sqrt(num)
+const pow2 = num => num ** 2;
+const pow2Fib = fib.map(pow2).map(Math.sqrt)
+console.log(toUppercCaseCar)
+console.log(pow2Fib)
 
 // Задача 1
 // const text = "Я, люблю Js"
