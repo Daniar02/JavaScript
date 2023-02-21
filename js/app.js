@@ -1410,43 +1410,59 @@
 //     console.log('After 2 seconds')
 // }, 2000)
 
-const delay = (wait = 1000) => {
-    const promise = new Promise( (resolve, reject) => {
-        setTimeout(() =>{
-            resolve()
-            // reject("Что-то пошло не так. Повторите попутку")
-        }, wait)
-    })
-    return promise
-}
-
-// delay(2500)
-//     .then( () => {
-//         console.log('After 2 seconds')
+// const delay = (wait = 1000) => {
+//     const promise = new Promise( (resolve, reject) => {
+//         setTimeout(() =>{
+//             resolve()
+//             // reject("Что-то пошло не так. Повторите попутку")
+//         }, wait)
 //     })
-//     .catch(err => console.error('Error',err))
-//     .finally(() => console.log('Finally'))
+//     return promise
+// }
+//
+// // delay(2500)
+// //     .then( () => {
+// //         console.log('After 2 seconds')
+// //     })
+// //     .catch(err => console.error('Error',err))
+// //     .finally(() => console.log('Finally'))
+//
+// const getData = () => new Promise(resolve => resolve([
+//     1, 1, 2, 3, 5, 8, 13
+// ]))
+// // getData().then(data => console.log(data))
+//
+// async function asyncExsample() {
+//     try {
+//         await delay(3000)
+//         const data = await getData()
+//         console.log("Data", data)
+//     }catch (e) {
+//         console.log(e)
+//     } finally {
+//         console.log('Finally')
+//     }
+// }
+// asyncExsample()
 
-const getData = () => new Promise(resolve => resolve([
-    1, 1, 2, 3, 5, 8, 13
-]))
-// getData().then(data => console.log(data))
+// ############################ Работа с DOM ############################
 
-async function asyncExsample() {
-    try {
-        await delay(3000)
-        const data = await getData()
-        console.log("Data", data)
-    }catch (e) {
-        console.log(e)
-    } finally {
-        console.log('Finally')
-    }
-}
-asyncExsample()
-
-
-
+// Menu
+// const lemonChicken = false;
+// const beefWithBlackBean = true;
+// const sweetAndSourPork = true;
+// const res = lemonChicken + beefWithBlackBean + sweetAndSourPork;
+// if (lemonChicken) {
+//     console.log("Отлично! я буду курицу");
+// } else if (beefWithBlackBean) {
+//     console.log("Заказываю говядину");
+// }
+// else if (sweetAndSourPork) {
+//     console.log("Заказываю свинину");
+// } else {
+//     console.log("Что ж, остается рис с яйцом");
+// }
+// console.log(res);
 
 
 
