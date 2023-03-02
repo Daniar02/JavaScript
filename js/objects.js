@@ -185,57 +185,103 @@
 // console.log(typeof gameObject); // объект
 
 /*############################### Методы получения и изменения данных ###############################*/
-let foo = {
-    a: "hello",
-    b: "Monday"
-};
-foo.a = "Manic";
-console.log(foo);
-
-let zorb = {
-    message: "Blah",
-
-    // Геттер
-    get greeting() {
-        return this.message;
-    },
-
-    // Сеттер
-    set greeting(value) {
-        this.message = value;
-    }
-};
+// let foo = {
+//     a: "hello",
+//     b: "Monday"
+// };
+// foo.a = "Manic";
+// console.log(foo);
+//
+// let zorb = {
+//     message: "Blah",
+//
+//     // Геттер
+//     get greeting() {
+//         return this.message;
+//     },
+//
+//     // Сеттер
+//     set greeting(value) {
+//         this.message = value;
+//     }
+// };
 
 // Генератор крика
-let shout = {
-    _message: "Hello!",
-
-    get message() {
-        return this._message;
-    },
-
-    set message(value) {
-        this._message = value.toUpperCase();
-    }
-};
-shout.message = "This is sparta!";
-console.log(shout.message);
+// let shout = {
+//     _message: "Hello!",
+//
+//     get message() {
+//         return this._message;
+//     },
+//
+//     set message(value) {
+//         this._message = value.toUpperCase();
+//     }
+// };
+// shout.message = "This is sparta!";
+// console.log(shout.message);
 
 // Регистрирование действий
-let superSecureTerminal = {
-    allUserNames: [],
-    _username: "",
+// let superSecureTerminal = {
+//     allUserNames: [],
+//     _username: "",
+//
+//     showHistory() {
+//         console.log(this.allUserNames);
+//     },
+//
+//     get username() {
+//         return this._username;
+//     },
+//
+//     set username(name) {
+//         this._username = name;
+//         this.allUserNames.push(name);
+//     }
+// };
+//
+// let myTerminal = Object.create(superSecureTerminal);
+// myTerminal.username = "Michael Gary Score";
+// myTerminal.username = "Dwight K. Schrut";
+// myTerminal.username = "Greed Bratton";
+// myTerminal.username = "Pam Beasley";
+//
+// myTerminal.showHistory();
 
-    showHistory() {
-        console.log(this.allUserNames);
+// Проверка значения свойства
+var person = {
+    _name: "",
+    _age: "",
+
+    get name() {
+        return this._name;
     },
 
-    get username() {
-        return this._username;
+    set name(value) {
+        if (value.length > 2) {
+            this._name = value;
+        } else {
+            console.log("Name is too short!")
+        }
     },
 
-    set username(name) {
-        this._username = name;
-        this.allUserNames.push(name);
+    get age() {
+        return this._age
+    },
+
+    set age(value) {
+        if (value < 5) {
+            console.log("Too young!");
+        } else {
+            this._age = value;
+        }
+    },
+
+    get details() {
+        return "Name: " + this.name + ", Age: " + this.age;
     }
-};
+}
+let muTerminal2 = Object.create(person);
+muTerminal2.name = "da";
+muTerminal2.age = 7;
+console.log(muTerminal2.details);

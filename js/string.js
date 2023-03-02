@@ -83,25 +83,25 @@
 // console.log(isPhoneNumber(num4Error));
 
 /*############################# Строки и массивы ##############################*/
-const userFullName = "Вася Пупкин Васильевич";
-console.log(userFullName.split(" "));
-const [firstName, familyName, lastName] = userFullName;
-console.log(firstName);
-console.log(familyName);
-console.log(lastName);
-const arr = ["Ты", "знаешь", "JS"];
-console.log(arr.join(" "));
+// const userFullName = "Вася Пупкин Васильевич";
+// console.log(userFullName.split(" "));
+// const [firstName, familyName, lastName] = userFullName;
+// console.log(firstName);
+// console.log(familyName);
+// console.log(lastName);
+// const arr = ["Ты", "знаешь", "JS"];
+// console.log(arr.join(" "));
 
 /*############################# Дополнение строк ##############################*/
-const film = "Звёздные Воины ";
-console.log(film.padStart(50, "*"));
-console.log(film.padEnd(50));
-console.log(film.repeat(10));
+// const film = "Звёздные Воины ";
+// console.log(film.padStart(50, "*"));
+// console.log(film.padEnd(50));
+// console.log(film.repeat(10));
 
 /*############################# Упражнение - маскировка карты ##############################*/
-/* Замаскировать всё, кроме последних 4х символов */
-const card = "2324252627282920222323";
-console.log(card.slice(-4).padStart(16, "*"));
+// /* Замаскировать всё, кроме последних 4х символов */
+// const card = "2324252627282920222323";
+// console.log(card.slice(-4).padStart(16, "*"));
 
 /*############################# Про строки в книге ##############################*/
 // let vowels = "aeiou";
