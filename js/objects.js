@@ -249,39 +249,128 @@
 // myTerminal.showHistory();
 
 // Проверка значения свойства
-var person = {
-    _name: "",
-    _age: "",
+// var person = {
+//     _name: "",
+//     _age: "",
+//
+//     get name() {
+//         return this._name;
+//     },
+//
+//     set name(value) {
+//         if (value.length > 2) {
+//             this._name = value;
+//         } else {
+//             console.log("Name is too short!")
+//         }
+//     },
+//
+//     get age() {
+//         return this._age
+//     },
+//
+//     set age(value) {
+//         if (value < 5) {
+//             console.log("Too young!");
+//         } else {
+//             this._age = value;
+//         }
+//     },
+//
+//     get details() {
+//         return "Name: " + this.name + ", Age: " + this.age;
+//     }
+// }
+// let muTerminal2 = Object.create(person);
+// muTerminal2.name = "da";
+// muTerminal2.age = 7;
+// console.log(muTerminal2.details);
 
-    get name() {
-        return this._name;
+/*########################### Об объектах подробнее ###########################*/
+// let funnyGuy = {};
+//
+// funnyGuy.firstName = "Conan";
+// funnyGuy["firstAge"] = 20;
+// console.log(funnyGuy);
+
+// Удаление свойств
+// let color = {
+//     header: "blue",
+//     footer: "gray",
+//     content: {
+//         title: "black",
+//         body: "darkgray",
+//         signature: "light blue"
+//     }
+// };
+// delete color.footer;
+// console.log(color);
+
+// color.header = undefined;
+// console.log(color);
+
+// Что же происходить под капотом?
+// let funnyGuy = {};
+// funnyGuy.toString();
+//
+// console.log(funnyGuy);
+
+// Создание пользовательских объектов
+// let funnyGuy = {
+//     firstName: "Conan",
+//     lastName: "O'Brien",
+//
+//     getName: function () {
+//         return "Name is: " + this.firstName + " " + this.lastName;
+//     }
+// };
+//
+//
+// let thenDude = {
+//     firstName: "Jeffrey",
+//     lastName: "Lebowski",
+//
+//     getName: function () {
+//         return "Name is: " + this.firstName + " " + this.lastName;
+//     }
+// };
+//
+// let detective = {
+//     firstName: "Adrian",
+//     lastName: "Monk",
+//
+//     getName: function () {
+//         return "Name is: " + this.firstName + " " + this.lastName;
+//     }
+// };
+// console.log(funnyGuy.getName());
+// console.log(thenDude.getName());
+// console.log(detective.getName());
+
+/* Цепочки */
+let person = {
+    getName: function () {
+        return "Name is: " + this.firstName + " " + this.lastName;
     },
-
-    set name(value) {
-        if (value.length > 2) {
-            this._name = value;
-        } else {
-            console.log("Name is too short!")
+    getInitials: function () {
+        if (this.firstName && this.lastName) {
+            return this.firstName[0] + this.lastName[0];
         }
-    },
-
-    get age() {
-        return this._age
-    },
-
-    set age(value) {
-        if (value < 5) {
-            console.log("Too young!");
-        } else {
-            this._age = value;
-        }
-    },
-
-    get details() {
-        return "Name: " + this.name + ", Age: " + this.age;
     }
-}
-let muTerminal2 = Object.create(person);
-muTerminal2.name = "da";
-muTerminal2.age = 7;
-console.log(muTerminal2.details);
+};
+
+let funnyGuy = Object.create(person);
+funnyGuy.firstName = "Conan";
+funnyGuy.lastName = "O'Brien";
+
+let thenDude = Object.create(person);
+thenDude.firstName = "Jeffrey";
+thenDude.firstName = "Lebowski";
+
+let detective = Object.create(person);
+detective.firstName = "Adrian";
+detective.lastName = "Monk";
+
+console.log(detective.getName()); //Name is: Adrian Monk
+console.log(detective.getInitials()); // AM
+
