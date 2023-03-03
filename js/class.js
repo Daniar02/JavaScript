@@ -87,3 +87,70 @@
     zor() {}
     }
 */
+
+/*######################### Расширение объектов #########################*/
+// class PotatoPlanet {
+//     constructor(name, radius, potatoType) {
+//         this.name = name;
+//         this.radius = radius;
+//         this.potatoType = potatoType;
+//     }
+//
+//     getSurfaceArea() {
+//         let surfaceArea = 4 * Math.PI * Math.pow(this.radius, 2);
+//         console.log(surfaceArea + " square km!");
+//         return surfaceArea;
+//     }
+//
+//     getPotatoType() {
+//         var thePotato = this.potatoType.toUpperCase() + "!!1!!";
+//         console.log(thePotato);
+//         return thePotato
+//     }
+//
+//     set gravity(value) {
+//         console.log("Setting value!");
+//         this._gravity = value;
+//     }
+//
+//     get gravity() {
+//         return this._gravity;
+//     }
+// }
+
+class Planet {
+    constructor(name, radius) {
+        this.name = name;
+        this.radius = radius;
+    }
+
+    getSurfaceArea() {
+        let surfaceArea = 4 * Math.PI * Math.pow(this.radius, 2);
+        console.log(surfaceArea + " square km!");
+        return surfaceArea;
+    }
+
+    set gravity(value) {
+        console.log("Setting value!");
+        this._gravity = value;
+    }
+
+    get gravity() {
+        return this._gravity;
+    }
+}
+class PotatoPlanet extends Planet {
+    constructor(name, width, potatoType) {
+        super(name, width);
+        this.potatoType = potatoType;
+    }
+
+    getPotatoType() {
+        let thePotato = this.potatoType.toUpperCase() + "!!1!!";
+        console.log(thePotato);
+        return thePotato
+    }
+}
+let sputnik = new PotatoPlanet("Sputnik", 12411,"Russet");
+sputnik.gravity = 42.1;
+sputnik.getPotatoType()
