@@ -375,18 +375,18 @@
 // console.log(detective.getInitials()); // AM
 
 /*########################### Расширение встроенных объектов ###########################*/
-function shuffle(input) {
-    for (let i = input.length - 1; i >= 0; i--) {
-
-        let randomIndex = Math.floor(Math.random() * (i + 1));
-        let itemAtIndex = input[randomIndex];
-
-        input[randomIndex] = input[i];
-        input[i] = itemAtIndex;
-    }
-    return input;
-}
-let shuffleArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-shuffle(shuffleArray);
-
-console.log(shuffleArray);
+// function shuffle(input) {
+//     for (let i = input.length - 1; i >= 0; i--) {
+//
+//         let randomIndex = Math.floor(Math.random() * (i + 1));
+//         let itemAtIndex = input[randomIndex];
+//
+//         input[randomIndex] = input[i];
+//         input[i] = itemAtIndex;
+//     }
+//     return input;
+// }
+// let shuffleArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// shuffle(shuffleArray);
+//
+// console.log(shuffleArray);
