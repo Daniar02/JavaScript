@@ -118,39 +118,156 @@
 //     }
 // }
 
-class Planet {
-    constructor(name, radius) {
-        this.name = name;
-        this.radius = radius;
+// class Planet {
+//     constructor(name, radius) {
+//         this.name = name;
+//         this.radius = radius;
+//     }
+//
+//     getSurfaceArea() {
+//         let surfaceArea = 4 * Math.PI * Math.pow(this.radius, 2);
+//         console.log(surfaceArea + " square km!");
+//         return surfaceArea;
+//     }
+//
+//     set gravity(value) {
+//         console.log("Setting value!");
+//         this._gravity = value;
+//     }
+//
+//     get gravity() {
+//         return this._gravity;
+//     }
+// }
+// class PotatoPlanet extends Planet {
+//     constructor(name, width, potatoType) {
+//         super(name, width);
+//         this.potatoType = potatoType;
+//     }
+//
+//     getPotatoType() {
+//         let thePotato = this.potatoType.toUpperCase() + "!!1!!";
+//         console.log(thePotato);
+//         return thePotato
+//     }
+// }
+// let sputnik = new PotatoPlanet("Sputnik", 12411,"Russet");
+// sputnik.gravity = 42.1;
+// sputnik.getPotatoType()
+
+/*######################### Все о ES6 Классах #########################*/
+// 1)
+// class  Animal {
+//
+//     static type = "Animal";
+//
+//     constructor(options) {
+//         this.name = options.name;
+//         this.age = options.age;
+//         this.hasTail = options.hasTail
+//     }
+//
+//     voice() {
+//         console.log("I am Animal");
+//     }
+// }
+// let animal = new Animal({
+//     name: "Animal",
+//     age: 23,
+//     hasTail: true
+// });
+// // animal.voice()
+// // console.log(animal);
+// // console.log(Animal.type);
+//
+// class Cat extends  Animal {
+//     static type = "CAT"
+//     constructor(options) {
+//         super(options);
+//         this.color = options.color
+//     }
+//     voice() {
+//         super.voice()
+//         console.log("I am Cat!")
+//     }
+//
+//     get ageInfo() {
+//         return this.age * 7
+//     }
+//
+//     set ageInfo(newAge) {
+//         this.age = newAge
+//     }
+// }
+//
+// const cat = new Cat({
+//     name: "Cat",
+//     age: 7,
+//     hasTail: true,
+//     color: "block"
+// })
+// cat.ageInfo = 8;
+// console.log(cat);
+// cat.voice();
+// console.log(Cat.type);
+// console.log(cat.ageInfo)
+
+// 2)
+// class Anime {
+//     constructor(name, age, hasTail) {
+//         this.name = name;
+//         this.age = age;
+//         this.hasTail = hasTail
+//     }
+// }
+// let anime = new Anime("Naruto", 20, true)
+// console.log(anime)
+
+
+class Component {
+    constructor(selector) {
+        this.$el = document.querySelector(selector)
     }
 
-    getSurfaceArea() {
-        let surfaceArea = 4 * Math.PI * Math.pow(this.radius, 2);
-        console.log(surfaceArea + " square km!");
-        return surfaceArea;
+    hide() {
+        this.$el.style.display = "none"
     }
 
-    set gravity(value) {
-        console.log("Setting value!");
-        this._gravity = value;
-    }
-
-    get gravity() {
-        return this._gravity;
+    show() {
+        this.$el.style.display = "block"
     }
 }
-class PotatoPlanet extends Planet {
-    constructor(name, width, potatoType) {
-        super(name, width);
-        this.potatoType = potatoType;
-    }
 
-    getPotatoType() {
-        let thePotato = this.potatoType.toUpperCase() + "!!1!!";
-        console.log(thePotato);
-        return thePotato
+class Box extends Component {
+    constructor(options) {
+        super(options.selector)
+
+        this.$el.style.width = this.$el.style.height = options.size + "px"
+        this.$el.style.background = options.color
     }
 }
-let sputnik = new PotatoPlanet("Sputnik", 12411,"Russet");
-sputnik.gravity = 42.1;
-sputnik.getPotatoType()
+
+const box1 = new Box({
+    selector: "#box1",
+    size: 100,
+    color: "red"
+})
+const box2 = new Box({
+    selector: "#box2",
+    size: 100,
+    color: "blue"
+})
+
+class Circle extends  Box {
+    constructor(options) {
+        super(options);
+
+        this.$el.style.borderRadius = "50%"
+    }
+}
+
+const c = new Circle({
+    selector: '#circle',
+    size: 90,
+    color: "green"
+})
