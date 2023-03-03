@@ -30,20 +30,60 @@
 */
 
 // Конструктор
-class Planet {
-    constructor(name, radius) {
-        this.name = name;
-        this.radius = radius;
-    }
-}
-// Вызываем класс Planet для создания объекта
-let myPlanet = new Planet("Earth", 6378);
-console.log(myPlanet)
+// class Planet {
+//     constructor(name, radius) {
+//         this.name = name;
+//         this.radius = radius;
+//     }
+// }
+// // Вызываем класс Planet для создания объекта
+// let myPlanet = new Planet("Earth", 6378);
+// console.log(myPlanet)
 
 // Если не использовать синтаксис класс, то можно сделать так
-function planet(name, radius) {
-    this.name = name;
-    this.radius = radius;
-}
-let myPlanet2 = new planet("Earth", 6378);
-console.log(myPlanet2)
+// function planet(name, radius) {
+//     this.name = name;
+//     this.radius = radius;
+// }
+// let myPlanet2 = new planet("Earth", 6378);
+// console.log(myPlanet2);
+
+/*######################### Что помещается в класс #########################*/
+// class Planet {
+//     constructor(name, radius) {
+//         this.name = name;
+//         this.radius = radius;
+//     }
+//     getSurfaceArea() {
+//         let surfaceArea = 4 * Math.PI * Math.pow(this.raadius, 2);
+//         console.log(surfaceArea + " square km!");
+//         return surfaceArea
+//     }
+//
+//     set gravity(value) {
+//         console.log("Setting value!")
+//         this._gravity = value;
+//     }
+//
+//     get gravity() {
+//         console.log("Getting value!")
+//         return this._gravity
+//     }
+// }
+// let earth = new Planet("Earth", 6378);
+// earth.gravity = 9.81;
+// earth.getSurfaceArea()
+// console.log(earth.gravity)
+
+// Упрощение функции
+/*
+    let blah = {
+        zor: function () {
+
+        }
+    }
+
+    let blah = {
+    zor() {}
+    }
+*/
