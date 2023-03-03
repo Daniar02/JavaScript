@@ -348,29 +348,45 @@
 // console.log(detective.getName());
 
 /* Цепочки */
-let person = {
-    getName: function () {
-        return "Name is: " + this.firstName + " " + this.lastName;
-    },
-    getInitials: function () {
-        if (this.firstName && this.lastName) {
-            return this.firstName[0] + this.lastName[0];
-        }
+// let person = {
+//     getName: function () {
+//         return "Name is: " + this.firstName + " " + this.lastName;
+//     },
+//     getInitials: function () {
+//         if (this.firstName && this.lastName) {
+//             return this.firstName[0] + this.lastName[0];
+//         }
+//     }
+// };
+//
+// let funnyGuy = Object.create(person);
+// funnyGuy.firstName = "Conan";
+// funnyGuy.lastName = "O'Brien";
+//
+// let thenDude = Object.create(person);
+// thenDude.firstName = "Jeffrey";
+// thenDude.firstName = "Lebowski";
+//
+// let detective = Object.create(person);
+// detective.firstName = "Adrian";
+// detective.lastName = "Monk";
+//
+// console.log(detective.getName()); //Name is: Adrian Monk
+// console.log(detective.getInitials()); // AM
+
+/*########################### Расширение встроенных объектов ###########################*/
+function shuffle(input) {
+    for (let i = input.length - 1; i >= 0; i--) {
+
+        let randomIndex = Math.floor(Math.random() * (i + 1));
+        let itemAtIndex = input[randomIndex];
+
+        input[randomIndex] = input[i];
+        input[i] = itemAtIndex;
     }
-};
+    return input;
+}
+let shuffleArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+shuffle(shuffleArray);
 
-let funnyGuy = Object.create(person);
-funnyGuy.firstName = "Conan";
-funnyGuy.lastName = "O'Brien";
-
-let thenDude = Object.create(person);
-thenDude.firstName = "Jeffrey";
-thenDude.firstName = "Lebowski";
-
-let detective = Object.create(person);
-detective.firstName = "Adrian";
-detective.lastName = "Monk";
-
-console.log(detective.getName()); //Name is: Adrian Monk
-console.log(detective.getInitials()); // AM
-
+console.log(shuffleArray);
