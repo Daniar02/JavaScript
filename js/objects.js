@@ -481,26 +481,43 @@
 /*
     преобразовать пользователей до вида {fullName: "Вася Пупкин', skillNum: 2
 */
-const users = [
-    {
-        name: "Вася",
-        surname: "Пупкин",
-        age: 30,
-        skills: ["Разработка", "DevOps"]
-    },
-    {
-        name: "Катя",
-        surname: "Белова",
-        age: 18,
-        skills: ["Дизайн"]
-    }
-]
+// const users = [
+//     {
+//         name: "Вася",
+//         surname: "Пупкин",
+//         age: 30,
+//         skills: ["Разработка", "DevOps"]
+//     },
+//     {
+//         name: "Катя",
+//         surname: "Белова",
+//         age: 18,
+//         skills: ["Дизайн"]
+//     }
+// ]
+//
+// const userData = users.map(user => {
+//     return {
+//         fullName: `${user.name} ${user.surname}`,
+//         skillNum: user.skills.length
+//
+//     }
+// })
+// console.log(userData)
 
-const userData = users.map(user => {
-    return {
-        fullName: `${user.name} ${user.surname}`,
-        skillNum: user.skills.length
+/*###############################  Методы объектов ###############################*/
+// const user = {
+//     name: "Вася",
+//     surname: "Пупкин",
+//     age: 24,
+//     getFullName: function (name, surname) {
+//         return  this.name + " " + this.surname
+//     }
+// }
+//
+// // function getFullName(user) {
+// //     return user.name + " " + user.surname
+// // }
+// //
+// console.log(user.getFullName("name" , "sf"))
 
-    }
-})
-console.log(userData)
