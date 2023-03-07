@@ -708,18 +708,40 @@
 // console.log(w)
 
 // ############################ Примитивы и объекты. ############################
-let firstName = "Anton";
-let firstName2 = firstName;
-firstName = "New"
-console.log(firstName);
-console.log(firstName2);
+// let firstName = "Anton";
+// let firstName2 = firstName;
+// firstName = "New"
+// console.log(firstName);
+// console.log(firstName2);
+//
+// const user1 = {
+//     name: "Anton"
+// }
+// const user2 = user1;
+// user2.name = "New";
+// console.log(user1);
+// console.log(user2);
 
-const user1 = {
-    name: "Anton"
+// ############################ Пример примитивов и объектов. ############################
+const user = {
+    name: "Anton",
+    id: 1,
+    roles: ["Admin"]
 }
-const user2 = user1;
-user2.name = "New";
-console.log(user1);
-console.log(user2);
 
+// const newUser = Object.assign({}, user);
+// user.name = "NewUser";
+// console.log(user);
+// console.log(newUser);
 
+const newUser2 = {
+    ...user
+};
+// user.name = "NewUser";
+// console.log(user);
+// console.log(newUser2);
+
+newUser2.name = "NewUser";
+newUser2.roles.push("User")
+console.log(user);
+console.log(newUser2);
