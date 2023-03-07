@@ -601,3 +601,32 @@
 // //         sumTemp += cities[key].temp;
 // //     }
 // //     console.log(sumTemp / citiesCount)
+
+/*###############################  Деструктуризация и rest. ###############################*/
+// // const arr = [1, 2, 3];
+// // const [z, x, y] = arr;
+// // console.log(z)
+//
+// const user = {
+//     name: "Вася",
+//     age: 40,
+//     city: "Moscow"
+// }
+// const {age, ...userWidthOuAge} = user;
+// console.log(age);
+// console.log(userWidthOuAge)
+//
+// const additionalData = {
+//     skills: ['Разработка', "Дизайн"],
+//     creditCard: "222323343433"
+// }
+// // user.skills = additionalData.skills;
+// // user.creditCard = additionalData.creditCard;
+//
+// user.test = "jsjfkl"
+//
+// // user = {
+// //     ...user,
+// //     ...additionalData
+// // }
+// console.log(user)
