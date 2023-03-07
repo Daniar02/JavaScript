@@ -528,40 +528,76 @@
     Возвращается true, если успешно и false, если не хватает баланс
     Так же реализовать метод вывода числа операций по кошельку
 */
-const wallet = {
-    balance: 0,
-    operations: [],
-    increase: function (sum, reason) {
-        this.balance += sum;
-        this.operations.push({
-            reason: reason,
-            sum: sum
-        })
-        return true
-    },
-    decrease: function (sum, reason) {
-        if (this.balance < sum) {
-            console.log("Недостаточно баланса")
-            return false;
-        }
-        this.balance -= sum
-        this.operations.push({
-            reason: reason,
-            sum: -sum
-        })
-        return true;
-    },
-    getOperationLength: function () {
-        return this.operations.length
-    }
-}
+// const wallet = {
+//     balance: 0,
+//     operations: [],
+//     increase: function (sum, reason) {
+//         this.balance += sum;
+//         this.operations.push({
+//             reason: reason,
+//             sum: sum
+//         })
+//         return true
+//     },
+//     decrease: function (sum, reason) {
+//         if (this.balance < sum) {
+//             console.log("Недостаточно баланса")
+//             return false;
+//         }
+//         this.balance -= sum
+//         this.operations.push({
+//             reason: reason,
+//             sum: -sum
+//         })
+//         return true;
+//     },
+//     getOperationLength: function () {
+//         return this.operations.length
+//     }
+// }
+//
+// console.log(wallet.increase(1000, "Зарплата"));
+// console.log(wallet.getOperationLength());
+// console.log(wallet.decrease(2000, "Покупка ноутбука"));
+// console.log(wallet.getOperationLength());
+// console.log(wallet.decrease(500, "Покупка телефона"));
+// console.log(wallet.getOperationLength());
+// console.log(wallet.balance);
+// console.log(wallet.operations);
 
-console.log(wallet.increase(1000, "Зарплата"));
-console.log(wallet.getOperationLength());
-console.log(wallet.decrease(2000, "Покупка ноутбука"));
-console.log(wallet.getOperationLength());
-console.log(wallet.decrease(500, "Покупка телефона"));
-console.log(wallet.getOperationLength());
-console.log(wallet.balance);
-console.log(wallet.operations);
-
+/*###############################  Итерирование по объекту. ###############################*/
+// const cities = {
+//     msk: {
+//         let: 200,
+//         temp: 25
+//     },
+//     spb: {
+//         it: 100,
+//         temp: 20
+//     }
+// }
+// // 1)
+// //     let sumTemp = 0;
+// //     let citiesCount = 0;
+// //     for (const key in cities) {
+// //         console.log(key)
+// //         citiesCount++;
+// //         sumTemp += cities[key].temp;
+// //     }
+// //     console.log(sumTemp / citiesCount)
+// // 2)
+// //     let sumTemp = 0;
+// //     console.log(Object.keys(cities))
+// //     let citiesCount = Object.keys(cities).length;
+// //     for (const key in cities) {
+// //         sumTemp += cities[key].temp;
+// //     }
+// //     console.log(sumTemp / citiesCount)
+// // 3)
+// //     let sumTemp = 0;
+// //     let citiesCount = Object.keys(cities).length;
+// //     for (const key of Object.keys(cities)) {
+// //         console.log(key);
+// //         sumTemp += cities[key].temp;
+// //     }
+// //     console.log(sumTemp / citiesCount)
