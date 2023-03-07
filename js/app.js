@@ -1008,3 +1008,17 @@
     jQuery содержит набор функций, которые позволяют найти нужные вам элементы и провести с ними определенные действия
  */
 
+// ############################ Пример работы call stack. ############################
+const sum = 1;
+console.log('start')
+console.log(sum);
+function add5(n) {
+    n = n + 5
+    if (n > 100) {
+        return n;
+    }
+    console.log(n);
+    return add5(n);
+}
+add5(sum);
+console.log("ended");
