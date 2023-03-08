@@ -1022,3 +1022,32 @@
 // }
 // add5(sum);
 // console.log("ended");
+
+// ############################ Scope chain. ############################
+/* Scope - область вашего кода, где определенная переменная может быть доступна. */
+
+// ############################ Пример scope chain. ############################
+// const successMessage = "Успех"
+// const user = {
+//     name: "Вася",
+//     roles:  []
+// }
+//
+// function addRole(user, role) {
+//     if (role == "admin") {
+//         const message = "Ошибка";
+//         console.log(message);
+//         return user;
+//
+//     }
+//     user.roles.push(role);
+//     console.log(successMessage);
+//
+//     function logRoles() {
+//         console.log(user.roles)
+//     }
+//     logRoles()
+//     return user;
+// }
+//
+// console.log(addRole(user, "dev"))
