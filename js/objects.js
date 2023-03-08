@@ -783,3 +783,30 @@
 // }
 // user2.getFullName = user.getFullName;
 // user2.getFullName();
+
+// ########################################## Контекст в методах. ##########################################
+// const user = {
+//     name: "Вася",
+//     surname: "Путин",
+//     age: 20,
+//     getUserInfo: function () {
+//         console.log(this)
+//         console.log(`${this.name} ${this.surname}`)
+//
+//         const canDrink = () => {
+//             if (this.age >= 18) {
+//                 console.log("Может уже пить!")
+//             } else {
+//                 console.log("Не может пить")
+//             }
+//         }
+//         canDrink();
+//     },
+//     getUserArrow: () => {
+//         console.log(this)
+//         console.log(`${this.name} ${this.surname}`)
+//     }
+// }
+//
+// user.getUserInfo();
+// user.getUserArrow()
