@@ -745,3 +745,41 @@
 // newUser2.roles.push("User")
 // console.log(user);
 // console.log(newUser2);
+
+// ############################ Пример использования this. ############################
+/*
+    Что такое this?
+        Переменная, которая создаётся для каждого контекста исполнения. Она указывает на владельца этой функции.
+        This не статичен и определяется только при вызове функции в зависимости от того, как она вызвана
+*/
+
+// console.log(this);
+
+// function addNum(num1, num2) {
+//     console.log(this);
+//     return num1 + num2
+// }
+// // addNum()
+//
+// const addNum2 = (num1, num2) => {
+//     console.log(this);
+//     return num1 + num2
+// }
+// // addNum2();
+//
+// const user = {
+//     name: "Вася",
+//     surname: "Путин",
+//     getFullName: function () {
+//         console.log(this);
+//         return this.name + " " + this.surname
+//     }
+// }
+// user.getFullName();
+//
+// const user2 = {
+//     name: "Марина",
+//     surname: "Катя"
+// }
+// user2.getFullName = user.getFullName;
+// user2.getFullName();
