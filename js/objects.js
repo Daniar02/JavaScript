@@ -841,3 +841,51 @@
 // console.log(company.getName());
 // console.log(company.ceo.getName());
 // console.log(company.employees.map(employee => employee.getName()));
+
+// ########################################## EOL для методов. ##########################################
+// const b = 1;
+// const a = {
+//     b,
+//     getB: function () {
+//         return this.b
+//     },
+//     getBAlt() {
+//         return this.b
+//     }
+// };
+// console.log(a);
+// console.log(a.getB());
+// console.log(a.getBAlt());
+
+// ########################################## Call, apply. ##########################################
+// const audi = {
+//     make: "Audi",
+//     model: "A3",
+//     year: 2020,
+//     damages: [],
+//     addDamage (part, rate) {
+//         console.log(`У авто ${this.make} ${this.model} ${this.year}  добавлено: - повреждение ${part} со степенью ${rate}`)
+//         this.damages.push({
+//             part,
+//             rate
+//         })
+//     }
+// }
+// audi.addDamage("Капот", 1);
+//
+// const bmw = {
+//     make: "BMW",
+//     model: "X5",
+//     year: 2022,
+//     damages: [],
+//
+// }
+// bmw.addDamage = audi.addDamage;
+// bmw.addDamage("Бампер", 2);
+//
+// const addDamageFunc = audi.addDamage;
+// addDamageFunc.call(audi, "Капот", 1);
+// addDamageFunc.call(bmw, "Бампер", 2);
+//
+// addDamageFunc.apply(audi, ["Капот", 1]);
+// addDamageFunc.apply(bmw, ["Бампер", 2]);
