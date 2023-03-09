@@ -112,46 +112,6 @@
 // }
 // timer();
 
-// Замыкание
-// function createCalcFunction(n) {
-//     return function () {
-//        console.log(1000 * n);
-//     };
-// }
-// const calc = createCalcFunction(42);
-// console.log(calc);
-// calc();
-
-// function createCalcFunction(n) {
-//     return function (num) {
-//         return n + num;
-//     };
-// }
-//
-// const addOne = createCalcFunction(1);
-// const addTen = createCalcFunction(10);
-//
-// console.log(addOne(10));
-//
-// console.log(addTen(10));
-// console.log(addTen(40));
-
-// function urlGenerator(domain) {
-//     return function (url) {
-//         return `https://${url}.${domain}`;
-//     };
-// }
-// const comUrl = urlGenerator('com');
-// const ruUrl = urlGenerator("ru");
-//
-// console.log(comUrl("google"));
-// console.log(comUrl("netflix"));
-//
-// console.log(ruUrl("google"));
-// console.log(ruUrl("netflix"));
-
-/* Что делает замыкания,- это позволяют функциям работать, даже когда их среда существенно изменяется или исчезает  */
-
 // ########################################## Введение в функции ##########################################
 // function logName(name, surname) {
 //     console.log(`Моё имя ${name} ${surname}`);
@@ -403,3 +363,71 @@
 // (function() {
 //     console.log("Start IIFE");
 // })();
+
+// ########################################## Замыкания. ##########################################
+/*
+    Что же такое замыкание?
+    Замыкание - это комбинация функции и лексического окружения, в котором эта функция была определена.
+    Простыми словами: функция помни, в каком контексте она была создана и может его использовать
+
+    Что делает замыкания,- это позволяют функциям работать, даже когда их среда существенно изменяется или исчезает
+
+    ! Замыкание имеет более высокий приоритет по сравнению с переменными родительских scope
+*/
+
+// Замыкание
+// function createCalcFunction(n) {
+//     return function () {
+//        console.log(1000 * n);
+//     };
+// }
+// const calc = createCalcFunction(42);
+// console.log(calc);
+// calc();
+
+// function createCalcFunction(n) {
+//     return function (num) {
+//         return n + num;
+//     };
+// }
+//
+// const addOne = createCalcFunction(1);
+// const addTen = createCalcFunction(10);
+//
+// console.log(addOne(10));
+//
+// console.log(addTen(10));
+// console.log(addTen(40));
+
+// function urlGenerator(domain) {
+//     return function (url) {
+//         return `https://${url}.${domain}`;
+//     };
+// }
+// const comUrl = urlGenerator('com');
+// const ruUrl = urlGenerator("ru");
+//
+// console.log(comUrl("google"));
+// console.log(comUrl("netflix"));
+//
+// console.log(ruUrl("google"));
+// console.log(ruUrl("netflix"));
+
+// Замыкание 2
+// function changeBalance() {
+//     let balance = 0;
+//     return function (sum) {
+//         balance += sum;
+//         console.log(`Балансе: ${balance}`)
+//     }
+// }
+//
+// const change = changeBalance();
+// change(100);
+// change(-50);
+// change(200);
+// console.dir(change);
+//
+// const change2 = changeBalance();
+// change2(100);
+// console.dir(change2);
