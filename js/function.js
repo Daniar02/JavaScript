@@ -385,3 +385,21 @@
 // const logWithLastName = createMamber("Нурсултан");
 // console.log(logWithLastName('Нурболот'));
 // console.log(logWithLastName('Адилет'));
+
+// ########################################## IIFE. ##########################################
+/*
+    IIFE (Immediately Invoked Function Expression) это JavaScript функция,
+    которая выполняется сразу же после того, как она была определена.
+
+    Функция становится мгновенно выполняющимся функциональным выражением.
+    Переменные внутри функции не могут быть использованы за пределами её области видимости.
+*/
+
+// function init() {
+//     console.log("Start");
+// }
+// init();
+//
+// (function() {
+//     console.log("Start IIFE");
+// })();
