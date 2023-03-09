@@ -29,7 +29,7 @@
 .input {
     box-sizing: border-box;
     padding: 15px 16px;
-    color: white;
+    color: black;
     border: 1px solid rgba(212, 212, 212, 0.05);
     border-radius: 10px;
     height: 56px;
