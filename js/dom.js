@@ -39,7 +39,7 @@ function submitForm() {
     document.querySelector('.notification').classList.add('notification_active');
     // 3) document.querySelector('.notification').classList.remove('notification_active');
     console.log(document.querySelector('.notification').getAttribute('class'));
-    document.querySelector('.notification').setAttribute('class', 'notification');
+    // document.querySelector('.notification').setAttribute('class', 'notification');
     document.querySelector('.notification').setAttribute('key', '1');
     document.querySelector('.notification').setAttribute('user-id', "1");
     console.log(Number(document.querySelector('.notification').getAttribute('user-id')));
@@ -58,12 +58,22 @@ function inputChanged(e) {
     }
 }
 
-// ########################################## Упражнение - получение DOM элементов. ##########################################
-console.log(document.querySelector('.one').innerText);
-console.log(document.querySelector('.one ~ div').innerText);
-console.log(document.querySelector('#two').innerText);
-console.log(document.querySelector('[user-id="4"]').innerText);
-/* Альтернативный пути */
-console.log(document.querySelectorAll('.one')[0].innerText);
-console.log(document.querySelectorAll('.one')[1].innerText);
-console.log(document.getElementById('two').innerText);
+// ####################################### Упражнение - получение DOM элементов. #######################################
+// console.log(document.querySelector('.one').innerText);
+// console.log(document.querySelector('.one ~ div').innerText);
+// console.log(document.querySelector('#two').innerText);
+// console.log(document.querySelector('[user-id="4"]').innerText);
+// /* Альтернативный пути */
+// console.log(document.querySelectorAll('.one')[0].innerText);
+// console.log(document.querySelectorAll('.one')[1].innerText);
+// console.log(document.getElementById('two').innerText);
+
+// ########################################## Добавление html на лету ##########################################
+// const panelText = 'Панель';
+// const panelClass = 'button';
+// const newElement = document.createElement('div');
+// newElement.setAttribute('user', '1');
+// newElement.classList.add('panel');
+// // newElement.innerText = "Кнопка";
+// newElement.innerHTML = `<button class="${panelClass}">${panelText}</button>`
+// document.querySelector('.test').appendChild(newElement);
