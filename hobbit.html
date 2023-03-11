@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hobbit App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/hobbit.css">
+</head>
+<body>
+    <div class="app">
+        <div class="panel">
+            <img class="logo" src="./images/logo.svg" alt="Логотип HobbitAdd">
+            <nav class="menu">
+                <div class="menu__list">
+                    <button class="menu__item menu__item_active">
+                        <img src="./images/water.svg" alt="Вода">
+                    </button>
+                    <button class="menu__item">
+                        <img src="./images/food.svg" alt="Еда">
+                    </button>
+                </div>
+                <button class="menu__add">
+                    <img src="./images/add.svg" alt="Добавить привычку">
+                </button>
+            </nav>
+        </div>
+        <div class="content">
+            <header>
+                <h1>Отжимания</h1>
+                <div class="progress">
+                    <div class="progress__text">
+                        <div class="progress__name">Прогресс</div>
+                        <div class="progress__percent">80%</div>
+                    </div>
+                    <div class="progress__bar">
+                        <div class="progress__cover-bar"></div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div>
+                    <div class="hobbit">
+                        <div class="hobbit__day">День 1</div>
+                        <div class="hobbit__comment">Первый подход всегда даётся тяжело</div>
+                        <button class="hobbit__delete">
+                            <img src="./images/delete.svg" alt="Удалить день 1">
+                        </button>
+                    </div>
+                </div>
+                <div class="hobbit">
+                    <div class="hobbit__day">День 2</div>
+                    <form class="hobbit__form">
+                        <input class="input_icon" type="text" placeholder="Комментарий" />
+                        <img class="input__icon" src="./images/comment.svg" alt="Иконка комментария">
+                        <button class="button">Готово</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+<script src="./js/hobbit.js"></script>
+</body>
+</html>
