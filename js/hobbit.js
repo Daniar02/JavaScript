@@ -9,6 +9,10 @@ const page = {
         h1: document.querySelector('.h1'),
         progressPercent: document.querySelector('.progress__percent'),
         progressCoverBar: document.querySelector('.progress__cover-bar')
+    },
+    content: {
+        daysContainer: document.getElementById('days'),
+        nextDays: document.querySelector('.hobbit__day')
     }
 }
 
@@ -27,10 +31,6 @@ function saveData() {
 
 /* render */
 function rerenderMenu(activeHobbit) {
-    if (!activeHobbit) {
-        return;
-    }
-
     for (const hobbit of hobbits) {
         const existed = document.querySelector(`[menu-hobbit-id="${hobbit.id}"]`);
         if (!existed) {
@@ -55,9 +55,6 @@ function rerenderMenu(activeHobbit) {
 }
 
 function rerenderHead(activeHobbit) {
-    if (!activeHobbit) {
-        return;
-    }
     page.header.h1.innerText = activeHobbit.name;
     const progress = activeHobbit.days.length / activeHobbit.target > 1
         ? 100
@@ -66,10 +63,31 @@ function rerenderHead(activeHobbit) {
     page.header.progressCoverBar.setAttribute('style', `width: ${progress}%`)
 }
 
+function rerenderContent(activeHobbit) {
+    page.content.daysContainer.innerHTML = "";
+    for (const index in activeHobbit.days) {
+        const element = document.createElement('div');
+        element.classList.add('hobbit');
+        element.innerHTML = `
+                        <div class="hobbit__day">День ${Number(index) + 1}</div>
+                        <div class="hobbit__comment">${activeHobbit.days[index].comment}</div>
+                        <button class="hobbit__delete">
+                            <img src="./images/delete.svg" alt="Удалить день ${index + 1}">
+                        </button>
+                       `
+        page.content.daysContainer.appendChild(element);
+    }
+    page.content.nextDays.innerHTML = `День ${activeHobbit.days.length + 1}`
+}
+
 function rerender(activeHobbitId) {
     const activeHobbit = hobbits.find(hobbit => hobbit.id === activeHobbitId);
+    if (!activeHobbit) {
+        return;
+    }
     rerenderMenu(activeHobbit);
     rerenderHead(activeHobbit);
+    rerenderContent(activeHobbit);
 }
 
 /* init */
