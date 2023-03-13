@@ -1,7 +1,7 @@
 // ########################################## Загрузка и сохранение данных. ##########################################
 let hobbits = [];
 const HOBBIT_KEY = 'HOBBIT_KEY';
-
+let globalActiveHobbitId;
 /* page */
 const page = {
     menu: document.querySelector('.menu__list'),
@@ -81,6 +81,7 @@ function rerenderContent(activeHobbit) {
 }
 
 function rerender(activeHobbitId) {
+    globalActiveHobbitId = activeHobbitId;
     const activeHobbit = hobbits.find(hobbit => hobbit.id === activeHobbitId);
     if (!activeHobbit) {
         return;
@@ -92,8 +93,26 @@ function rerender(activeHobbitId) {
 
 /* work with days */
 function addDays(event) {
+    const form = event.target;
     event.preventDefault();
-    const data = new FormData(event.target);
+    const data = new FormData(form);
+    const comment = data.get('comment');
+    form['comment'].classList.remove('error');
+    if (!comment) {
+        form['comment'].classList.add('error');
+    }
+    hobbits = hobbits.map(hobbit => {
+        if (hobbit.id === globalActiveHobbitId) {
+            return {
+                ...hobbit,
+                days: hobbit.days.concat([{ comment }])
+            }
+        }
+        return hobbit;
+    });
+    form['comment'].value = '';
+    rerender(globalActiveHobbitId);
+    saveData();
 }
 
 /* init */
