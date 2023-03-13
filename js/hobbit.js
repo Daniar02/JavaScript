@@ -71,7 +71,7 @@ function rerenderContent(activeHobbit) {
         element.innerHTML = `
                         <div class="hobbit__day">День ${Number(index) + 1}</div>
                         <div class="hobbit__comment">${activeHobbit.days[index].comment}</div>
-                        <button class="hobbit__delete">
+                        <button class="hobbit__delete" onclick="deleteDay(${index})">
                             <img src="./images/delete.svg" alt="Удалить день ${index + 1}">
                         </button>
                        `
@@ -111,6 +111,21 @@ function addDays(event) {
         return hobbit;
     });
     form['comment'].value = '';
+    rerender(globalActiveHobbitId);
+    saveData();
+}
+
+function deleteDay(index) {
+    hobbits = hobbits.map(hobbit => {
+        if (hobbit.id === globalActiveHobbitId) {
+            hobbit.days.splice(index, 1);
+            return {
+                ...hobbit,
+                days: hobbit.days
+            };
+        }
+        return hobbit;
+    });
     rerender(globalActiveHobbitId);
     saveData();
 }
