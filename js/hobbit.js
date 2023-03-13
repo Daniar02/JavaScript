@@ -90,6 +90,12 @@ function rerender(activeHobbitId) {
     rerenderContent(activeHobbit);
 }
 
+/* work with days */
+function addDays(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+}
+
 /* init */
 ( () => {
     loadData();

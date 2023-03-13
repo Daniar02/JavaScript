@@ -54,10 +54,10 @@
                 </div>
                 <div class="hobbit">
                     <div class="hobbit__day">День _</div>
-                    <form class="hobbit__form">
-                        <input class="input_icon" type="text" placeholder="Комментарий" />
+                    <form class="hobbit__form" onsubmit="addDays(event)">
+                        <input name="comment" class="input_icon" type="text" placeholder="Комментарий" />
                         <img class="input__icon" src="./images/comment.svg" alt="Иконка комментария">
-                        <button class="button">Готово</button>
+                        <button class="button" type="submit">Готово</button>
                     </form>
                 </div>
             </main>
