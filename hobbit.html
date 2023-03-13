@@ -24,7 +24,7 @@
 <!--                        <img src="./images/food.svg" alt="Еда">-->
 <!--                    </button>-->
                 </div>
-                <button class="menu__add">
+                <button class="menu__add" onclick="togglePopup()">
                     <img src="./images/add.svg" alt="Добавить привычку">
                 </button>
             </nav>
@@ -62,7 +62,7 @@
                 </div>
             </main>
         </div>
-        <div class="cover cover_hidden">
+        <div class="cover" id="add-hobbit-popup">
             <div class="popup">
                 <h2>Новая привычка</h2>
                 <div class="icon-label">Иконка</div>
@@ -82,7 +82,7 @@
                     <input type="number" name="target" placeholder="Цель">
                     <button class="button" type="submit">Добавить</button>
                 </form>
-                <button class="popup__close">
+                <button class="popup__close" onclick="togglePopup()">
                     <img src="./images/close.svg" alt="Закрыть попап">
                 </button>
             </div>
