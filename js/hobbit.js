@@ -42,6 +42,35 @@ function togglePopup() {
     }
 }
 
+function resetForm(form, fields) {
+    for (const field of fields) {
+        form[field].value = '';
+    }
+}
+
+function validateAndGetFormData(form, fields) {
+    const formData = new FormData(form);
+    const res = {}
+    for (const field of fields) {
+        const fieldValue = formData.get(field);
+        form[field].classList.remove('error');
+        if (!fieldValue) {
+            form[field].classList.add('error');
+        }
+        res[field] = fieldValue;
+    }
+    let isValid = true;
+    for (const field of fields) {
+        if (!res[field]) {
+            isValid = false;
+        }
+    }
+    if (!isValid) {
+        return;
+    }
+    return res;
+}
+
 /* render */
 function rerenderMenu(activeHobbit) {
     for (const hobbit of hobbits) {
@@ -106,24 +135,21 @@ function rerender(activeHobbitId) {
 
 /* work with days */
 function addDays(event) {
-    const form = event.target;
     event.preventDefault();
-    const data = new FormData(form);
-    const comment = data.get('comment');
-    form['comment'].classList.remove('error');
-    if (!comment) {
-        form['comment'].classList.add('error');
+    const data = validateAndGetFormData(event.target, ['comment']);
+    if (!data) {
+        return;
     }
     hobbits = hobbits.map(hobbit => {
         if (hobbit.id === globalActiveHobbitId) {
             return {
                 ...hobbit,
-                days: hobbit.days.concat([{ comment }])
+                days: hobbit.days.concat([{comment: data.comment}])
             }
         }
         return hobbit;
     });
-    form['comment'].value = '';
+    resetForm(event.target, ['comment'])
     rerender(globalActiveHobbitId);
     saveData();
 }
@@ -152,8 +178,30 @@ function setIcon(context, icon) {
     context.classList.add('icon_active')
 }
 
+function addHobbit(event) {
+    event.preventDefault();
+    console.log(event.target)
+    const data = validateAndGetFormData(event.target, ['name', 'icon', 'target']);
+    console.log(data);
+    if (!data) {
+        return;
+    }
+    const maxId = hobbits.reduce((acc, hobbit) => acc > hobbit.id ? acc : hobbit.id, 0)
+    hobbits.push({
+        id: maxId + 1,
+        name: data.name,
+        target: data.target,
+        icon: data.icon,
+        days: []
+    });
+    resetForm(event.target, ['name', 'target']);
+    togglePopup();
+    saveData();
+    rerender(maxId + 1)
+}
+
 /* init */
-( () => {
+(() => {
     loadData();
     rerender(hobbits[0].id);
 })();
