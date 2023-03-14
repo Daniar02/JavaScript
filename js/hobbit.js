@@ -128,6 +128,7 @@ function rerender(activeHobbitId) {
     if (!activeHobbit) {
         return;
     }
+    document.location.replace(document.location.pathname + '#' + activeHobbitId);
     rerenderMenu(activeHobbit);
     rerenderHead(activeHobbit);
     rerenderContent(activeHobbit);
@@ -203,5 +204,11 @@ function addHobbit(event) {
 /* init */
 (() => {
     loadData();
-    rerender(hobbits[0].id);
+    const hashId = Number(document.location.hash.replace('#', ''));
+    const urlHobbit = hobbits.find(hobbit => hobbit.id == hashId);
+    if (urlHobbit) {
+        rerender(urlHobbit.id);
+    } else {
+        rerender(hobbits[0].id);
+    }
 })();
