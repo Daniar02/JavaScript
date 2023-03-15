@@ -28,41 +28,41 @@
 // }
 
 // ########################################## Обработка событий клавиатуры. ##########################################
-function submitForm() {
-    const input = document.querySelector('.input').value;
-    if (!input) {
-        return
-    }
-    document.querySelector('.panel').innerText = input;
-    document.querySelector('.input').value = '';
-    // 1) document.querySelector('.notification').style.display = "block";
-    document.querySelector('.notification').classList.add('notification_active');
-    /* Упражнение - сохранение JSON. */
-    const textString = JSON.stringify({
-        text: input
-    });
-    localStorage.setItem('text', textString)
-
-    // 3) document.querySelector('.notification').classList.remove('notification_active');
-    // console.log(document.querySelector('.notification').getAttribute('class'));
-    // document.querySelector('.notification').setAttribute('class', 'notification');
-    // document.querySelector('.notification').setAttribute('key', '1');
-    // document.querySelector('.notification').setAttribute('user-id', "1");
-    // console.log(Number(document.querySelector('.notification').getAttribute('user-id')));
-
-}
-
-// document.querySelector('.input').addEventListener('keydown', (e) => {
+// function submitForm() {
+//     const input = document.querySelector('.input').value;
+//     if (!input) {
+//         return
+//     }
+//     document.querySelector('.panel').innerText = input;
+//     document.querySelector('.input').value = '';
+//     // 1) document.querySelector('.notification').style.display = "block";
+//     document.querySelector('.notification').classList.add('notification_active');
+//     /* Упражнение - сохранение JSON. */
+//     const textString = JSON.stringify({
+//         text: input
+//     });
+//     localStorage.setItem('text', textString)
+//
+//     // 3) document.querySelector('.notification').classList.remove('notification_active');
+//     // console.log(document.querySelector('.notification').getAttribute('class'));
+//     // document.querySelector('.notification').setAttribute('class', 'notification');
+//     // document.querySelector('.notification').setAttribute('key', '1');
+//     // document.querySelector('.notification').setAttribute('user-id', "1");
+//     // console.log(Number(document.querySelector('.notification').getAttribute('user-id')));
+//
+// }
+//
+// // document.querySelector('.input').addEventListener('keydown', (e) => {
+// //     if (e.code == "Enter") {
+// //         submitForm()
+// //     }
+// // });
+//
+// function inputChanged(e) {
 //     if (e.code == "Enter") {
 //         submitForm()
 //     }
-// });
-
-function inputChanged(e) {
-    if (e.code == "Enter") {
-        submitForm()
-    }
-}
+// }
 
 // ####################################### Упражнение - получение DOM элементов. #######################################
 // console.log(document.querySelector('.one').innerText);
