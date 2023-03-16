@@ -432,6 +432,32 @@
 // change2(100);
 // console.dir(change2);
 
+// ##################################  Замыкание и лексическое окружение ##################################
+// let number = 5;debugger
+// function logNumber() {
+//     // let number = 5;debugger
+//     console.log(number);debugger
+// }
+// number = 6;debugger
+// logNumber();
+// number = 8;debugger
+// logNumber();
+//
+// function createCounter() {
+//     let counter = 0;
+//     function myFunction() {
+//         counter = counter + 1;debugger
+//         return counter;debugger
+//     }
+//     return myFunction;
+// }
+// debugger
+// const increment = createCounter();
+// const c1 = increment();debugger
+// const c2 = increment();debugger
+// const c3 = increment();debugger
+// console.log(c1, c2, c3);
+
 // ########################################## Упражнение - работа с замыканиями. ##########################################
 /*
     Сделать функцию пользователя, которая берёт за основу userInfo и за счёт замыкания создаёт новый объект.
