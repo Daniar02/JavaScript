@@ -1,4 +1,5 @@
-.panel {
+/*Обработка событий клавиатуры*/
+/*.panel {
     font-size: 18px;
     color: white;
     background: rgba(255, 255, 255, 0.05);
@@ -48,10 +49,10 @@
     line-height: 21px;
     outline: none;
     box-shadow: none;
-}
+}*/
 
 /*Получение элементов со страницы*/
-.box {
+/*.box {
     margin-top: 30px;
     width: 150px;
     height: 150px;
@@ -129,4 +130,31 @@
     margin-bottom: 30px;
     margin-top: 30px;
     color: #fff;
-}
+} */
+
+/*События и их обработчики*/
+/*button {*/
+/*    width: 150px;*/
+/*    height: 50px;*/
+/*    background-color: green;*/
+/*    border: none;*/
+/*    color: #fff;*/
+/*    border-radius: 10px;*/
+/*    outline: none;*/
+/*    cursor: pointer;*/
+/*    transition: 0.3s;*/
+/*  }*/
+/*  button:hover {*/
+/*    transform: scale(0.95);*/
+/*  }*/
+/*  .overlay {*/
+/*    background-color: pink;*/
+/*    width: 200px;*/
+/*    height: 100px;*/
+/*    text-align: center;*/
+/*    line-height: 100px;*/
+/*  }*/
+/*  a {*/
+/*    display: block;*/
+/*    margin-top: 30px;*/
+/*  }*/
