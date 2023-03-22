@@ -353,28 +353,42 @@ console.log(getTotalProgressByIteration(students));
 // // touchleave
 // // touchcancel
 
-window.addEventListener('DOMContentLoaded', () => {
-    const box = document.querySelector('.box');
-
-    box.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-
-        console.log('start');
-        console.log(e.targetTouches);
-    });
-
-    box.addEventListener('touchmove', (e) => {
-        e.preventDefault();
-
-        console.log(e.targetTouches[0].pageX);
-    });
-
-    // box.addEventListener('touchend', (e) => {
-    //     e.preventDefault();
-
-    //     console.log('End');
-    // });
-});
+// window.addEventListener('DOMContentLoaded', () => {
+//     const box = document.querySelector('.box');
+//
+//     box.addEventListener('touchstart', (e) => {
+//         e.preventDefault();
+//
+//         console.log('start');
+//         console.log(e.targetTouches);
+//     });
+//
+//     box.addEventListener('touchmove', (e) => {
+//         e.preventDefault();
+//
+//         console.log(e.targetTouches[0].pageX);
+//     });
+//
+//     // box.addEventListener('touchend', (e) => {
+//     //     e.preventDefault();
+//
+//     //     console.log('End');
+//     // });
+// });
 // // touches
 // // targetTouches
 // // changetTouches
+
+// ###################################### Async, defer, динамические скрипты ######################################
+
+// const p = document.querySelectorAll('p');
+// console.log(p);
+
+// function loadScript(src) {
+//     const sctipt = document.createElement('script');
+//     sctipt.src = src;
+//     sctipt.async = false;
+//     document.body.append(sctipt);
+// }
+
+// loadScript("js/test.js");
