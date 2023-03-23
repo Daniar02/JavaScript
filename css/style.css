@@ -1,0 +1,13 @@
+/* Оператор нулевого слияния (Nullish, ) ES11 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  background-color: olive;
+}
