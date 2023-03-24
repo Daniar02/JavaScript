@@ -494,3 +494,206 @@
 // const user2 = user();
 // user2().increase(100);
 // console.log(user2());
+
+// ################################################ function ################################################
+// function add(a, b) {
+//     return a + b;
+// }
+//
+// function subtract(a, b) {
+//     return a - b;
+// }
+//
+// function number(a, b) {
+//     return a * b;
+// }
+//Функция высшего порядка
+// function calclate(a, b, fn) {
+//     console.log(fn.name);
+//     const res = fn(a, b);
+//     return res;
+// }
+// let res = calclate(3, 5, add);
+// console.log(res);
+// res = calclate(3, 5, subtract);
+// console.log(res);
+// res = calclate(3, 5, number);
+// console.log(res);
+//////////////////////////////////////////
+// function power(pow) {
+//     return function(num) {
+//         return num * pow;
+//     };
+// }
+// Стрелечный функции
+// const power = pow => num => pow*num;
+// ////////////////////////////////
+// const powerOfTwo = power(2);
+// console.log(powerOfTwo(5));
+// console.log(powerOfTwo(10));
+//
+// const powerOfThree = power(4);
+// console.log(powerOfThree(5));
+// console.log(powerOfThree(10));
+//
+// console.log(power(2)(5));
+//////////////////////////////
+
+// ##################################### Функции, стрелочные ф-ции #####################################
+
+// FUNCTION DECLARATION
+// Создается до начала выполнения скрипта,можно вызвать перед объявлением
+// function showFirstMessage() {
+//     console.log('Hello World');
+// }
+// showFirstMessage();
+
+// function showFirstMessage(text) {
+//     console.log(text);
+// }
+// showFirstMessage('Hello World');
+
+// let num = 20;
+// function showFirstMessage(text) {
+//     console.log(text);
+//     // let num = 10;
+//     // num = 12;
+//     console.log(num);
+// }
+// showFirstMessage('Hello World');
+// console.log(num);
+
+// function calc(a, b) {
+//     return (a + b);
+// }
+// console.log(calc(4, 3));
+// console.log(calc(5, 6));
+// console.log(calc(10, 6));
+
+// function ret() {
+//     let num = 50;
+//     //
+//     return num;
+// }
+// const anotherNum = ret();
+// console.log(anotherNum);
+
+// FUNCTION EXPRESSION
+// Создается только тогда, когда доходит поток кода,можно вызвать только после объявления.
+// const logger = function() {
+//     console.log("Hello");
+// };
+// logger();
+
+// СТРЕЛОЧНЫЕ ФУНКЦИИ
+// Не имеет своего контекста (this)
+// const calc = (a, b) => a + b;
+// const calc = (a, b) => {
+
+//     return (a + b);
+
+// };
+// console.log(calc(2, 3));
+
+// ##################################### Домашняя работа  Функции #####################################
+// function showMessage() {
+//   alert( 'Всем привет!' );
+// }
+
+// showMessage();
+// showMessage();
+
+// function showMessage() {
+//     let message = "Привет, я JavaScript!"; // локальная переменная
+
+//     alert( message );
+//   }
+
+//   showMessage(); // Привет, я JavaScript!
+
+//   alert( message ); // <-- будет ошибка, т.к. переменная видна только внутри функции
+
+// let userName = 'Вася';
+// function showMessage() {
+//     let message = 'Привет ' + userName;
+//     alert(message);
+// }
+// showMessage();
+
+// let userName = 'Вася';
+// function showMessage() {
+//     let userName = 'Петя'; // (1) изменяем значение внешней переменной
+//     let message = 'Привет, ' + userName;
+//     alert(message);
+// }
+// alert(userName); // Вася перед вызовом функции
+// alert(userName);
+// showMessage(); // Петя, значение внешней переменной было изменено функцией
+
+// function showMessage(from, text) { // параметры: from, text
+//     alert(from + ':' + text);
+// }
+// showMessage('Аня', 'Привет'); // Аня: Привет! (*)
+// showMessage('Аня', 'Как дела'); // Аня: Как дела? (**)
+
+// function showMessage(from, text) {
+//     from = '*' + from + '*'; // немного украсим "from"
+//     alert(from + ': ' + text);
+// }
+
+// let from = 'Аня';
+// showMessage(from, 'Привет'); // *Аня*: Привет
+// значение "from" осталось прежним, функция изменила значение локальной переменной
+// alert(from); // Аня
+
+// функции
+// function toPower(num, power) {
+//     const res = num + power;
+//     return res;
+// }
+// console.log(toPower(4, 6));
+// // Стрелочный функции
+// const toPowerArrow = (num, power) => num + power;
+// console.log(toPowerArrow(4, 6));
+
+// function showMessage(from, text="Текст не дабавлен") {
+//     alert(from + ":" + text);
+// }
+// showMessage('Аня'); // Аня: текст не добавлен
+
+// ##################################### Еще раз про аргументы функций #####################################
+// const usdCurr = 28;
+// const eurCurr = 32;
+// function convert(amount, curr) {
+//     console.log(curr * amount);
+// }
+// convert(500, usdCurr);
+// convert(500, eurCurr);
+
+// ##################################### Про важность return #####################################
+// const usdCurr = 28;
+// const discount = 0.9;
+// function convert(amount, cur) {
+//     return cur * amount;
+// }
+
+// function promation(result) {
+//     console.log(result * discount);
+// }
+
+// // const res = convert(500, usdCurr);
+// promation(convert(500, usdCurr));
+
+// function test() {
+//     for (let i = 0; i < 5; i++) {
+//         console.log(i);
+//         if (i === 5) {
+//             return;
+//         }
+//     }
+//     console.log('Done');
+// }
+// test();
+
+// function doNothing() {}
+// console.log(doNothing() === undefined);
