@@ -1032,3 +1032,18 @@
 // };
 // const newObj = {...q};
 // console.log(newObj);
+
+// ###################################### JSON формат передачи данных, глубокое клонирование объектов ######################################
+// const persone = {
+//     name: 'Alex',
+//     tel: '+996709785590',
+//     parents: {
+//         mom: 'Olga',
+//         dad: 'Mike'
+//     }
+// }
+//
+// const clone = JSON.parse(JSON.stringify(persone));
+// clone.parents.mom = 'Ann';
+// console.log(persone);
+// console.log(clone);
