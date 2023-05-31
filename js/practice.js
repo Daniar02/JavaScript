@@ -173,4 +173,23 @@
 // console.log(isUnique('abcABC')) // -> true
 // console.log(isUnique('abcadef')) // -> false
 
-
+/*--------------------------- Плоский массив --------------------------*/
+/*
+function flatten(array) {
+    const res = [];
+    for (let i = 0; i < array.length; i++) {
+        if (Array.isArray(array[i])) {
+            const flat = flatten(array[i])
+            console.log('Flat',flat)
+            for (let j = 0; j < flat.length; j++) {
+                res.push(flat[j])
+                console.log('Flat', flat[j])
+            }
+        } else {
+            res.push(array[i])
+        }
+    }
+    return res
+}
+console.log(flatten([[1], [[2, 3]], [[[4]]]])) // -> [1, 2, 3, 4];
+*/
