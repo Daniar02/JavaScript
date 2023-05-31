@@ -149,3 +149,28 @@
 //
 // console.log(prices1, maxProfit(prices1));
 // console.log(prices2, maxProfit(prices2));
+
+/*--------------------------- Уникальность всех символов в строке --------------------------*/
+// function isUnique(string) {
+
+/* 1)
+    for (let i = 0; i < string.length; i++) {
+        const char = string[i];
+
+        if (string.lastIndexOf(char) !== i) {
+            return false
+        }
+    }
+    return true
+*/
+
+/* 2)
+    return new Set(string).size === string.length
+*/
+// }
+// console.log(isUnique('abcdef')) // -> true
+// console.log(isUnique('1234567')) // -> true
+// console.log(isUnique('abcABC')) // -> true
+// console.log(isUnique('abcadef')) // -> false
+
+
