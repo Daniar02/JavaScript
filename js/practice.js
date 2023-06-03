@@ -498,3 +498,62 @@ function groupBy(array, fn) {
 console.log(groupBy([6.1, 4.2, 6.3], Math.floor)) // -> { '4': [4.2], '6': [6.1, 6.3] }
 console.log(groupBy(['one', 'two', 'three'], 'length')) // -> { '3': ['one', 'two'], '5': ['three'] }
 */
+
+/*--------------------------- Очередь с О(1) сложностью операций --------------------------*/
+/*
+class LinkedList {
+    #length = 0
+
+    constructor() {
+        this.head = null
+        this.tail = null
+    }
+
+    addToTail(value) {
+        const node = {
+            value,
+            next: null
+        }
+
+        if (this.#length === 0) {
+            this.head = node
+            this.tail = node
+        } else {
+            this.tail = node
+        }
+
+        this.#length++
+    }
+
+    removeFromHead() {
+        if (this.#length === 0) {
+            return
+        }
+
+        const value = this.head.value
+
+        this.head = this.head.next
+        this.#length--
+
+        return value
+    }
+
+    size() {
+        return this.#length
+    }
+}
+
+
+class Queue extends LinkedList {
+    constructor() {
+        super()
+
+        this.enqueue = this.addToTail
+        this.dequeue = this.removeFromHead
+    }
+
+    get size() {
+        return super.size()
+    }
+}
+*/
