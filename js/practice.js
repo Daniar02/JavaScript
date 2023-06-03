@@ -452,3 +452,30 @@ const fibonacci = (function () {
 // console.log(fibonacci(10)) // -> [1, 1, 2, 3, 5, 8, 13, 21]
 // console.log(fibonacci(8)) // -> [1, 1, 2, 3, 5, 8, 13, 21]
 // console.log(fibonacci(12)) // -> [1, 1, 2, 3, 5, 8, 13, 21]
+
+/*--------------------------- Универсальная сумма --------------------------*/
+/*
+function add(a, b) {
+    if (typeof a === 'undefined') {
+        return add
+    }
+    if (typeof b === 'undefined') {
+        return function sum(c) {
+            if (typeof c === 'undefined') {
+                return sum
+            }
+            return a + c
+        }
+    }
+    return a + b
+}
+console.log(add(20, 22)) // -> 42
+console.log(add(20)(22)) // -> 42
+console.log(add(20)()(22)) // -> 42
+console.log(add(20)()()()(22)) // -> 42
+console.log(add(20)()()()()()()()()()()()(22)) // -> 42
+console.log(add()(20)(22)) // -> 42
+console.log(add()()()()(20)(22)) // -> 42
+console.log(add()(20)()(22)) // -> 42
+console.log(add()()()()()(20)()()()(22)) // -> 42
+*/
