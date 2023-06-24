@@ -557,3 +557,10 @@ class Queue extends LinkedList {
     }
 }
 */
+
+/*--------------------------- Сумма элементов массива --------------------------*/
+// const array = [1, 2, 2, 3, 4, 5, 6, 6, 1];
+//
+// let sum = array.reduce((acc, next) => acc + next, 0)
+//
+// console.log(sum)
