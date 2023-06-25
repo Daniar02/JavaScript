@@ -564,3 +564,20 @@ class Queue extends LinkedList {
 // let sum = array.reduce((acc, next) => acc + next, 0)
 //
 // console.log(sum)
+
+/*--------------------------- Максимальный или минимальный элемент массива  --------------------------*/
+// const array = [1, 2, 2, 4, 5, 6, 6];
+
+/* 1)
+let max = array[0];
+for (let i = 0; i < array.length; i++) {
+    if (array[i] > max) {
+        max = array[i]
+    }
+}
+*/
+
+/* 2)
+let max = array.reduce((acc, next) => Math.max(acc, next));
+*/
+// console.log(max);
