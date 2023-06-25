@@ -581,3 +581,27 @@ for (let i = 0; i < array.length; i++) {
 let max = array.reduce((acc, next) => Math.max(acc, next));
 */
 // console.log(max);
+
+/*--------------------------- Сортировка массива --------------------------*/
+// const array = [2, 1, 3, 4, 6, 5];
+// array.sort((x1, x2) => x1 - x2 );
+// console.log(array);
+//
+// const users = [
+//     {
+//         name: 'Alex',
+//         age: 30
+//     },
+//     {
+//         name: 'Olga',
+//         age: 20
+//     }
+// ];
+//
+// /*users.sort((u1, u2) => u1.age - u2.age);*/
+// /*
+// users.sort((u1, u2) => {
+//     return u1.name.localeCompare(u2.name)
+// });
+// */
+// console.log(users)
