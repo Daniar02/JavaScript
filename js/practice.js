@@ -605,3 +605,13 @@ let max = array.reduce((acc, next) => Math.max(acc, next));
 // });
 // */
 // console.log(users)
+
+/*--------------------------- Развернуть массива --------------------------*/
+// const array = [2, 1, 3, 4, 6, 5];
+// const reversed = array.map((e, i, arr) => arr[arr.length - i - 1]);
+// console.log(reversed);
+// console.log(
+//     [...array].map(array.pop, array)
+// )
+
+
