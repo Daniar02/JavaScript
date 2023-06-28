@@ -620,3 +620,21 @@ let max = array.reduce((acc, next) => Math.max(acc, next));
 // const notFalsy = array.filter(n => !!n);
 // console.log(notFalsy);
 
+/*--------------------------- Сколько раз каждый элемент встречается в массиве --------------------------*/
+// {kiwi: 3, apple: 2, orange: 1}
+// const fruits = ['kiwi', 'apple', 'kiwi', 'orange', 'kiwi', 'apple'];
+//
+// const countFruit = (list) => {
+//     const count = {};
+//
+//     list .forEach(f => {
+//         if (!count[f]) {
+//             count[f] = 1;
+//         } else {
+//             count[f] ++;
+//         }
+//     });
+//
+//     return count;
+// }
+// console.log(countFruit(fruits));
