@@ -638,3 +638,18 @@ let max = array.reduce((acc, next) => Math.max(acc, next));
 //     return count;
 // }
 // console.log(countFruit(fruits));
+
+/*--------------------------- Создать массив который содержит только уникальные значения --------------------------*/
+// ['kiwi', 'apple', 'orange']
+// const myFruits = ['kiwi', 'apple', 'kiwi', 'orange', 'kiwi', 'apple'];
+//
+// const uniqueItems = (list) => {
+//     const unique = {};
+//
+//     list.forEach(f => {
+//         unique[f] = true;
+//     });
+//
+//     return Object.keys(unique);
+// };
+// console.log(uniqueItems(myFruits));
