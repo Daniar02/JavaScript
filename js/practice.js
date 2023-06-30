@@ -653,3 +653,36 @@ let max = array.reduce((acc, next) => Math.max(acc, next));
 //     return Object.keys(unique);
 // };
 // console.log(uniqueItems(myFruits));
+
+/*--------------------------- Создать функцию, которая сгруппирует студентов по возрасту. --------------------------*/
+/*--------------------------- На выходе получить объект, где ключ - возраст, а значение - массив студентов --------------------------*/
+/*
+{
+    '20': [{name: 'alex', age: 20}, {name: 'masha', age: 20}],
+    '24': [{name: 'miki', age: 24}],
+    '18': [{name: 'ivan', age: 18}],
+}
+*/
+
+// const students = [
+//     {name: 'alex', age: 20},
+//     {name: 'miki', age: 24},
+//     {name: 'masha', age: 20},
+//     {name: 'ivan', age: 18},
+// ];
+//
+// const groupStudents = (list) => {
+//     const grouped = {};
+//
+//     list.forEach(s => {
+//         if (!grouped[s.age]) {
+//             grouped[s.age]= [s];
+//         } else {
+//             grouped[s.age].push(s);
+//         }
+//     });
+//
+//     return grouped;
+// };
+//
+// console.log(groupStudents(students));
