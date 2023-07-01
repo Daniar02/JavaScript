@@ -718,3 +718,18 @@ let max = array.reduce((acc, next) => Math.max(acc, next));
 //
 // console.log(findPairs(myNumbers, sum));
 
+/*--------------------------- Получить единый массив из любимых пицц каждого друга --------------------------*/
+// [ 'cheese', 'pepperoni', 'salami', 'margarita', 'meat', 'fish' ]
+
+// const friends = [
+//     {name: 'alex', pizzas: ['cheese', 'pepperoni']},
+//     {name: 'mike', pizzas: ['salami', 'margarita']},
+//     {name: 'stos', pizzas: ['meat']},
+//     {name: 'anna', pizzas: ['fish']},
+// ];
+//
+// const pizzas = friends.reduce((accum, current) => {
+//     return [...accum, ...current.pizzas];
+// }, []);
+//
+// console.log(pizzas);
