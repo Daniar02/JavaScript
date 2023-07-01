@@ -607,9 +607,9 @@ let max = array.reduce((acc, next) => Math.max(acc, next));
 // console.log(users)
 
 /*--------------------------- Развернуть массива --------------------------*/
-// const array = [2, 1, 3, 4, 6, 5];
-// const reversed = array.map((e, i, arr) => arr[arr.length - i - 1]);
-// console.log(reversed);
+const array = [2, 1, 3, 4, 6, 5];
+const reversed = array.map((e, i, arr) => arr[arr.length - i - 1]);
+console.log(reversed);
 // console.log(
 //     [...array].map(array.pop, array)
 // )
@@ -733,3 +733,11 @@ let max = array.reduce((acc, next) => Math.max(acc, next));
 // }, []);
 //
 // console.log(pizzas);
+
+/*--------------------------- Записать строку (символы строки) в обратном порядке (2 способа) --------------------------*/
+// pizza => azzip
+// const myStr = 'pizza';
+// const reverseString = (str) => {
+//     return str.split('').reverse().join('');
+// }
+// console.log(reverseString(myStr));
