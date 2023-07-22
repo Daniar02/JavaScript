@@ -779,3 +779,5 @@ console.log(reversed);
 // console.log(s4, isValid(s4));
 // console.log(s5, isValid(s5));
 // console.log(s6, isValid(s6));
+
+/*--------------------------- Задачи --------------------------*/
