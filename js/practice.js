@@ -780,4 +780,18 @@ console.log(reversed);
 // console.log(s5, isValid(s5));
 // console.log(s6, isValid(s6));
 
-/*--------------------------- Задачи --------------------------*/
+/*--------------------------- сделай так чтобы при клике кнопки добавлялся класс active и удалялся при повторном клике на  кнопку --------------------------*/
+// DOM container box 4
+// let $container = window.document.querySelectorAll('#container button');
+//
+// console.log($container);
+//
+// for (let i = 0; i < $container.length; i++) {
+//     $container[i].addEventListener('click', () => {
+//         if ($container[i].classList.contains('active')) {
+//             $container[i].classList.remove('active');
+//         } else {
+//             $container[i].classList.add('active');
+//         }
+//     });
+// }
